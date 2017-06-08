@@ -1,0 +1,425 @@
+﻿@charset "utf-8";
+
+* {
+	padding: 0;
+	margin: 0
+}
+
+li,ul {
+	list-style: none
+}
+
+a,a:hover {
+	text-decoration: none;
+	color: #fff
+}
+
+i {
+	font-style: normal
+}
+
+.clear {
+	zoom: 1
+}
+
+.clear:after {
+	clear: both;
+	height: 0;
+	display: block;
+	content: '.';
+	visibility: hidden
+}
+
+img {
+	border: none
+}
+
+button,input,textarea {
+	border: none;
+	outline: 0
+}
+
+body {
+	font-family: Microsoft YaHei,Arial,Helvetica,sans-serif;
+	font-size: 20px;
+	background: #fff;
+	line-height: 24px;
+	color: #000;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 80px;
+}
+
+.fl {
+	float: left
+}
+
+.fr {
+	float: right
+}
+.banner_main{
+	width: 100%;
+	height: 630px;
+	background-image: url(../imgs/bj.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-color: #fde5e5;
+}
+.btn{width: 454px;padding:8px 0;margin: 0 auto;}
+.btn p{font-size: 24px;text-align: center;line-height: 30px;}
+.btn a{display:block;height:76px;background:url(../imgs/swx_btn.png) no-repeat;margin:10px 0;font-size: 48px;padding-left:140px;line-height: 76px;color:#fff;animation: dx 1s linear alternate infinite;}
+.banner {
+	width: 1100px;
+	height: 486px;
+	/*background-image: url(../images/banner.png);*/
+	margin: 0 auto;
+	padding-top:30px;
+
+	background-position: left bottom;
+	background-repeat: no-repeat;
+}
+.banner_txt{
+	float:left;
+	width:750px;
+	height:600px;
+	position:relative}
+.pop{
+	position:absolute;
+	right:0px;
+	top:170px;
+	width:229px;
+	height:137px}
+.banner_txt_tittle{
+	top:450px;
+	font-size:40px;
+	color:#c1282d;
+	position:absolute;
+	left:50px;
+	
+}
+.banner_txt_tittle span{
+	font-size: 90px;
+	font-weight: 700;
+	letter-spacing:5px;
+}
+.banner_txt_tittle srong{
+	font-size: 40px;
+	font-weight: 400;
+}
+.banner_txt_tittle p{
+	margin-top:40px;font-size: 34px;}
+.weibj{
+	 background-image: url("../imgs/weibj.png");
+    float: right;
+    height: 560px;
+   
+    width:318px;
+}
+.weixin{
+	 float: right;
+    height: 185px;
+    margin-right: 70px;
+    margin-top: 170px;
+    width: 185px;}
+.weixintitle{
+	float:right;
+	width:100%;
+	margin-top:95px;
+	color:#fff;
+	text-align:center;
+	font-size:30px;}
+.w1000 {
+	margin: auto;
+	width:1100px;
+	padding-top:30px;
+	padding-bottom:30px;
+	position:relative
+}
+.main1{
+	width: 960px;
+	background:#d92e34;
+	color:#fff;
+	margin:140px auto 80px auto;
+	padding:20px;
+	font-size:23px;
+	line-height:38px;
+	position:relative;
+	
+}
+.main1_top{
+	width: 372px;
+	height: 124px;
+	position: absolute;
+	background-image: url(../imgs/images_04.jpg);
+	left:340px;
+	  top: -124px;
+	}
+.title_b{
+	width: 696px;
+	height: 111px;
+	position: absolute;
+	top: -55px;
+	left: 150px;
+    background-image: url(../imgs/titlebj.png);
+	font-size: 30px;
+	line-height: 100px;
+	color: #FFF;
+	text-align: center;
+}
+.note {
+	width: 100%;
+	margin: 0 auto;
+	background: #d61322;
+	overflow: hidden;
+	text-align: center;
+	color: #e1e1e1;
+	padding: 15px 0;
+	font-size: 1px
+}
+
+.note strong {
+	font-size: 1pc;
+	margin-bottom: 10px
+}
+
+.note1 {
+	margin-top: 15px;
+	margin-bottom: 15px
+}
+
+.note1,.note2 {
+	color: #ffacb2;
+	font-size: 14px
+}
+
+.note2 {
+	background: #8f000b;
+	border-radius: 15px;
+	padding: 5px 8px
+}
+.line {
+	width:100%;
+	
+	}
+.redbj{
+	background:#fde5e5}
+
+.weixin_foot{
+	width: 100%;
+	height: 270px;
+	background: #fff6f6;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #f2f2f2;
+	padding-bottom:20px;
+}
+.weixin_left{
+	width:50%;
+	float:left}
+.weixin_right{
+	width: 48%;
+	float: right;
+	background-image: url(../imgs/weixinna1.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 243px;
+}
+.weixinb{
+	width: 213px;
+	height: 215px;
+	float: right;
+	/*background-image: url(../images/wexinbj.jpg);*/
+	padding-top: 15px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	margin-right:20px;
+}
+.weixinna{
+	width:446px;
+	height:243px;
+	float:right}
+.weixin_right_top{background: url(../imgs/weixinna2.png) no-repeat center; width: 446px; height: 243px;
+animation: dx 1s linear alternate infinite; margin-left: 50px; display: block;}
+.foot_t{
+	float: left;
+	color: #fff;
+	margin-top: 140px;
+	width: 100%;
+	text-align: center;
+	font-size: 34px;
+	background: url(../imgs/weixinna3.png) no-repeat center;
+}
+.stepbox{
+	width:1100px;}
+.stepbox .zhao{
+	width:270px;
+	float:left;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+.stepbox .center{
+	width:470px;
+	margin-left:20px;
+	float:left;
+	margin-top:50px;
+	color:#921b03}
+.stepbox .center h3{
+	color:#c42f34;
+	font-size:24px;
+	margin-bottom:20px}
+.stepbox .gu{
+	float:right;
+	width:320px}
+.top{
+	margin-top:20px}
+.left{
+	float:left!important}
+.right{
+	float:right!important}
+.weifont{
+	float:left;
+	width:270px;
+	margin-top:50px;
+}
+.weifont h2{
+	  border-bottom: 3px solid #333;
+    color: #fa0300;
+    font-size: 35px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+    width: 180px;
+}
+.weifont h3{
+	color: #535353;
+	font-size: 30px;
+	font-weight: normal;
+	margin-top:20px;
+	line-height:40px;
+}
+.title_b h2{
+	font-size:36px}
+.stepbox h4{
+	text-align:center;
+	color:#C33;
+	padding-bottom:5px;
+	font-size:20px}
+.txt{
+	text-align:right;
+	font-size:12px;
+	
+	margin:5px auto}
+
+.footer{
+	padding:15px 0;
+	text-align: center;
+	font-size: 16px;
+	background: #333;
+	color: #fff;
+	line-height: 28px;
+}
+
+.swbsfc{ display:none;width: 354px;height: 581px;background:url(../imgs/swx_xfc.png) no-repeat;position: fixed;right:50%; margin-right:-177px;top: 50%;margin-top: -290.5px;}
+.swbsfc span{width: 200px;height:200px;position: absolute;left: 50%;margin-left: -107px;top:140px;}
+.swbsfc span img{width:100%;height:100%;}
+.swbsfc_txt{width:100%;position: absolute;bottom: 20px;}
+.swbsfc p{width:100%;font-size:18px;color:#fff;text-align: center;line-height:23px;}
+.close{position: absolute;right: -1px;top: 18px;z-index:9999;}   
+
+@-webkit-keyframes dx{
+  0%{ -webkit-transform:scale(1)}
+  100%{-webkit-transform:scale(1.1)}
+}
+@keyframes dx{
+  0%{transform:scale(1)}
+  100%{transform:scale(1.1)}
+}
+@-moz-keyframes dx{
+  0%{ -moz-transform:scale(1)}
+  100%{-moz-transform:scale(1.1)}
+}
+
+
+.btm{height:80px;position: fixed;left:0;bottom:0;width:100%;}
+.btm .bg{position: absolute;left:0;top:0;width:100%;height:100%;background:#333;opacity: 0.8;filter: alpha(opacity=80);z-index: 1;}
+.btm .container{position: relative;z-index: 2;width:1200px;margin:0 auto;}
+.btm h3{font:bold 28px/76px "Microsoft Yahei";color:#dcb965;letter-spacing: 4px;padding-left:60px;animation: flicker 2s linear infinite;}
+.btm h3 span{color:#ff000c;text-decoration: underline;letter-spacing: 0;animation: flicker2 2s linear infinite;}
+.btm a{height:40px;font:normal 18px/40px "Microsoft Yahei";color:#fff;background: #8c1d22;border-radius: 18px;overflow: hidden;margin:20px 20px 20px 0;padding:0 40px;animation: breath 1s linear infinite alternate ;}
+.btm .container>span{height:40px;font:normal 18px/80px "Microsoft Yahei";color:#fff;display: block;height:80px;}
+
+@-moz-keyframes breath{
+  from{transform: scale(1);}
+  to{transform:scale(1.16);}
+}
+@-webkit-keyframes breath{
+  from{transform: scale(1);}
+  to{transform:scale(1.16);}
+}
+@-ms-keyframes breath{
+  from{transform: scale(1);}
+  to{transform:scale(1.16);}
+}
+@-o-keyframes breath{
+  from{transform: scale(1);}
+  to{transform:scale(1.16);}
+}
+
+@-moz-keyframes flicker{
+  0% {color:#dcb965}
+  49.999%{color:#dcb965}
+  50%{color:#ff000c}
+  99.99%{color:#ff000c}
+  100% {color:#dcb965}
+}
+@-webkit-keyframes flicker{
+  0% {color:#dcb965}
+  49.999%{color:#dcb965}
+  50%{color:#ff000c}
+  99.99%{color:#ff000c}
+  100% {color:#dcb965}
+}
+@-ms-keyframes flicker{
+  0% {color:#dcb965}
+  49.999%{color:#dcb965}
+  50%{color:#ff000c}
+  99.99%{color:#ff000c}
+  100% {color:#dcb965}
+}
+@-o-keyframes flicker{
+  0% {color:#dcb965}
+  49.999%{color:#dcb965}
+  50%{color:#ff000c}
+  99.99%{color:#ff000c}
+  100% {color:#dcb965}
+}
+
+@-moz-keyframes flicker2{
+  0% {color:#ff000c;}
+  49.999%{color:#ff000c;}
+  50%{color:#fff;}
+  99.99%{color:#fff;}
+  100% {color:#ff000c;}
+}
+@-webkit-keyframes flicker2{
+  0% {color:#ff000c;}
+  49.999%{color:#ff000c;}
+  50%{color:#fff;}
+  99.99%{color:#fff;}
+  100% {color:#ff000c;}
+}
+@-ms-keyframes flicker2{
+  0% {color:#ff000c;}
+  49.999%{color:#ff000c;}
+  50%{color:#fff;}
+  99.99%{color:#fff;}
+  100% {color:#ff000c;}
+}
+@-o-keyframes flicker2{
+  0% {color:#ff000c;}
+  49.999%{color:#ff000c;}
+  50%{color:#fff;}
+  99.99%{color:#fff;}
+  100% {color:#ff000c;}
+}
