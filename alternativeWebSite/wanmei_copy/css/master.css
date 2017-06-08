@@ -1,0 +1,43 @@
+@import url("../../../../../www.wanmei.com/public/style/wm.css"/*tpa=http://www.wanmei.com/public/style/wm.css*/);
+html{ min-width:1002px; }
+body,a{ font-family:"微软雅黑"; outline:none;blr:expression(this.onFocus=this.blur());}
+em,i{ font-style:normal;}
+textarea {resize:none}
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block;margin:0; padding:0;}
+.clearfix:after{content:"";display:block;height:0;clear: both;}
+.clearfix{zoom:1;}
+.wrap_bot{background:#fff url("../images/bg_02.jpg") no-repeat center 491px;}
+.wrap_top{background: url("../images/bg_01.jpg") no-repeat center top;}
+.rel{width: 1200px;margin:0 auto;overflow:hidden;}
+.rel .title{margin:19px 0;font-size: 36px;font-weight: bold;color:#ab2632;}
+.rel .title span{display: inline-block;*display: inline;*zoom:1;margin-right:15px;width:58px;height:58px;line-height:58px;text-align:center;background-color: #cdcdcd;color:#fff;font-size:37px;}
+.head{height: 543px;}
+.main{padding-bottom:100px;}
+.vedio_box{float: left;width: 796px;}
+.vedio_box .server_box{width: 796px;height:41px;line-height: 41px;background: url("../images/server_bg.png") no-repeat center;overflow: hidden;}
+.vedio_box .server_box ul li{float: left;margin:0 35px;font-size:18px;color:#fff;}
+.vedio_box .server_box ul li strong{font-weight: bold;color:#ffd45f;}
+.videoBox{width:795px;height:406px;}
+.regBox{width:390px; height:543px;float:right;background:url("../images/reg_bg.jpg") no-repeat 0 0;}
+.regBox h2{font-size:19px;font-weight:bold;color:#1464b2;padding:18px 0 18px 78px;}
+.reg01{height:206px;}
+.reg01 p{padding-left:8px;}
+.reg01 p img{margin-right:4px;}
+.btn_lq{ cursor:pointer;display:block;margin:5px auto;width:322px;height:40px;line-height:40px;color:#fff;font-size:16px;text-indent:88px;background:#ff3b78 url("../images/lqbg.png") no-repeat 40px center;}
+.btn_lq:hover{background-color:#ff0e38;}
+.reg03 p{padding-left:70px;overflow:hidden;}
+.reg03 a{float:left;margin-left:10px;display:block;float:left;width: 130px;height:40px;line-height:40px;text-align:center;color:#fff;font-size:14px;background-color:#1464b2;cursor:pointer;}
+.reg03 a:hover{background-color:#023793;}
+.reg03 h2{padding-bottom:8px;padding-top:10px;}
+.lcHide{display:none;}
+.reg02{width:382px;margin:0 auto;height:230px;position: relative;}
+.lbNumber {padding-left:20px;padding-top:5px;display:none; }
+.lbNumber span{font-size:16px;font-weight:bold;color:#1464b2;padding-right:10px;}
+.lbNumber strong{width:190px;text-align:center;padding:2px 15px;font-size:12px;background-color:#1464b2;color:#fff;}
+.lbNumber p{text-align:center;padding:5px 0;}
+.regBg{background:url("../images/reg_change.jpg") no-repeat center top;}
+.imgs li{float: left;margin-right:15px;position: relative;width: 390px;height: 207px;}
+.imgs li img{width: 390px;height: 207px;display: block;}
+.imgs li h5{position: absolute;bottom: 0;left:0;width: 100%;height: 26px;line-height: 26px;background: rgba(0,0,0,0.5);color:#fff;text-indent: 20px;font-size:14px;}
+.code{position: fixed;left:50%;top:200px;margin-left:620px;width: 134px;height:134px;border:4px solid #810d36;background: url("../images/code.jpg") no-repeat center;}
+

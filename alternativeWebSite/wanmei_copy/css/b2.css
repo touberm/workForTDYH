@@ -1,0 +1,37 @@
+.wm_bottom_main {
+	height: 114px; width: 100%; background-color: #141110;
+}
+div.wm_bottom_warp, div.wm_bottom_paizhao a {
+	-moz-box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+    -o-box-sizing: content-box !important;
+    -ms-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+}
+.wm_bottom_warp {
+	position: relative;
+	height: 114px;  width: 624px; margin: 0px auto; padding-left: 245px;
+	font-size: 12px; font-family: Verdana, Geneva, sans-serif;
+	color: #6d5038;
+}
+.wm_bottom_warp a:link{ color:#6d5038; text-decoration:none; font-family:Verdana,\5b8b\4f53,sans-serif; }
+.wm_bottom_warp a:visited { color:#6d5038; text-decoration:none; }
+.wm_bottom_warp a:hover { color:#835f41;}
+.wm_bottom_warp a:active { color:#835f41;}
+
+.wm_bottom_paizhao, .wm_bottom_items, .wm_bottom_icp, .wm_bottom_video, .wm_bottom_copyright { line-height: 19px; }
+.wm_bottom_paizhao a {
+	position: absolute; z-index: 1;  width: 67px; height: 35px; top: 26px; padding-left: 45px; padding-top:10px;
+	text-align:center; text-decoration:none; line-height:14px;
+	background-image: url(http://www.wanmei.com/public/images/top/bg.gif); background-repeat: no-repeat;
+	border:1px solid #1b1715;
+}
+.wm_bottom_paizhao a.wangjing { left:120px; background-position: -0px -327px; display: none;  }
+.wm_bottom_paizhao a.beian { left:0; background-position: -78px -211px; }
+.wm_bottom_items { padding-top: 12px; clear: both; }
+.wm_bottom_items a { float: left; display: inline; margin-right:23px; white-space: nowrap; }
+.wm_bottom_items a:link { text-decoration:none; }
+
+.wm_bottom_icp { clear: both; }
+.wm_bottom_video {}
+.wm_bottom_copyright {}

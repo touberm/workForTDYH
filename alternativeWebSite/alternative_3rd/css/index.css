@@ -1,0 +1,80 @@
+.fl{float: left;}
+.fr{float:right;}
+.clear{zoom:1;}
+.clear:after{content:'';display: block;clear:both;}
+ol,ul,li{list-style: none;}
+a{text-decoration:none;}
+#page .generalMsi{background: #363636;padding:10px 0;}
+#page .generalMsi .container{width:888px;margin:0 auto;}
+#page .generalMsi ul{list-style: none;text-align: center;padding-left: 45px;margin:0;}
+#page .generalMsi ul li{font-size: 12px;color:#fff;width:60px;padding: 0 10px; border-right: 1px solid #fff; margin: 10px 0;}
+#page .generalMsi ul li.last{border-right:0;}
+#page .generalMsi ul li:hover a{color:#0085d9;}
+#page .generalMsi ul li a{color:#fff;}
+#page .generalMsi ul li a.current{color:#0085d9;}
+#page .generalMsi p{margin:0;padding-left: 60px;padding-bottom: 10px;color:#fff;font-size:12px;}
+#page .generalMsi p span{margin:0;display: inline;padding-right: 10px;color:#fff;font-size:12px;}
+
+
+/*gameStore*/
+#page #body .gs{width:100%;}
+#page #body .gs h1{font-family: 'Microsoft YaHei';color:#fff;text-align: center;}
+#page #body .gs table{border-collapse: collapse;border:2px solid #fff;margin:0 auto;width:800px;margin-bottom: 60px;}
+#page #body .gs table td{border:1px solid #fff;color:#fff;text-align: color: #000;font-size:18px;}
+#page #body .gs table td.name{width:200px;}
+#page #body .gs table td.usage{width:400px;}
+#page #body .gs table td.price{width:200px;}
+#page #body .gs table td p{text-align:center;}
+
+/*apply*/
+#page #body .apply{width:100%;}
+#page #body .apply h3{font-family: 'Mircosoft YaHei';color:#fff;border-bottom: 1px dashed #fff;padding-bottom: 10px;}
+#page #body .apply .wrap .menu.fl{width:180px;background:#f6f6f6;margin:0;padding:0;}
+#page #body .apply .wrap .menu.fl li{position: relative;}
+#page #body .apply .wrap .menu.fl li a{border-bottom: 1px solid #eaeaea; color: #808080; display: block; height: 20px; line-height: 20px; padding: 10px 0; font-size: 14px;text-align: center;}
+#page #body .apply .wrap .menu.fl li a i{position: absolute;right: 20px;top: 10px;}
+#page #body .apply .wrap .menu.fl li a.choice{background:#f32d25;color:#fff;}
+#page #body .apply .wrap .fr.main{width:680px;margin-bottom:100px;}
+#page #body .apply .wrap .fr.main.hidden{display: none;}
+#page #body .apply .wrap .fr.main form{width:100%;}
+#page #body .apply .wrap .fr.main form dl {margin:0;}
+#page #body .apply .wrap .fr.main form dl dt{float:left;color:#fff; font-size: 14px; line-height: 42px; text-align: right; width: 115px;}
+#page #body .apply .wrap .fr.main form dl dd{line-height: 42px; margin-bottom: 20px; margin-left: 115px; color: #404040;}
+#page #body .apply .wrap .fr.main form dl dd .m_input input{border: 1px solid #c8c8c8; border-radius: 3px; height: 20px; line-height: 20px; padding: 10px; width: 220px; font: 14px/125% 'Microsoft YaHei';}
+#page #body .apply .wrap .fr.main form dl dd ul.somme{padding:0;}
+#page #body .apply .wrap .fr.main form dl dd ul.somme li{line-height: 40px; margin-right: 8px;}
+#page #body .apply .wrap .fr.main form dl dd ul.somme li a{background-color: #fafafa; border: 1px solid #c8c8c8;border-radius: 3px; color: #808080; display: block; font-size: 14px; height: 40px; padding: 0 20px; text-align: center; text-decoration: none; cursor: pointer;}
+#page #body .apply .wrap .fr.main form dl dd ul.somme li a.current{background: #f32d25 none repeat scroll 0 0; border-color: #f32d25; color: #fff;}
+
+#page #body .apply .wrap .fr.main form dl dd ul.bankList{padding:0;}
+#page #body .apply .wrap .fr.main form dl dd ul.bankList li{cursor: pointer; float: left; line-height: 26px; margin: 0 3px 3px 0; position: relative; font: 14px/125% 'Microsoft YaHei';}
+#page #body .apply .wrap .fr.main form dl dd ul.bankList li a{border: 1px solid #ddd; color: #f6f6f6; display: block; height: 26px; padding: 2px 7px; width: 110px; text-decoration: none; cursor: pointer;    font-size: 12px;line-height: 26px;text-align: center;}
+#page #body .apply .wrap .fr.main form dl dd ul.bankList li a.current{border: 1px solid #f32d25;color:#f32d25;}
+#page #body .apply .wrap .fr.main form dl dd{color:#fff;}
+#page #body .apply .wrap .fr.main form dl dd.applyPlatform a{background-color: #fafafa;
+    border: 1px solid #c8c8c8;color: #808080;display: inline-block;border-radius: 3px;  font-size: 14px; height: 40px; padding: 0 20px; text-align: center; text-decoration: none; cursor: pointer;}
+#page #body .apply .wrap .fr.main form dl dd.applyPlatform a.current{background: #f32d25 none repeat scroll 0 0; border-color: #f32d25; color: #fff;}
+#page #body .apply .wrap .fr.main form dl dd strong.fwb{    color: #f32d25; font-size: 16px; }
+#page #body .apply .wrap .fr.main form dl dd input.btn{background-color: #f32d25; border: 1px solid #f32d25; border-radius: 3px; box-shadow: 0 1px 0 #ccc; color: #fff; display: block; font-size: 16px; height: 40px; line-height: 40px; text-align: center; width: 143px; cursor: pointer; font: 14px/125% Microsoft yahei;}
+
+/* reset 条款 .rules */
+#page #body .rules{color:#fff;margin-bottom: 100px;}
+#page #body .rules .title{font-family: 'Mircosoft YaHei';color:#fff;border-bottom: 1px dashed #fff;padding-bottom: 10px;letter-spacing: 4px;}
+#page #body .rules span{color:orange;}
+
+#page #body .rules p{text-indent: 2em;font-size:16px;line-height: 30px;}
+#page #body .rules h4{color:#0085d9;}
+/* trade disput 交易纠纷 */
+#page #body .td p{text-indent: 2em;font-size:16px;line-height: 30px;}
+#page #body .td h4{color:#0085d9;}
+/* parental controls 家长监护 */
+#page #body .pc a{font-size:24px;color:#3366ff;padding-left:5px;}
+
+/*introduce 游戏介绍*/
+#page #body .intr img:hover{opacity: 1;}
+#page #body .intr ul{margin:0;padding: 0;}
+#page #body .intr ul li {color:#fff;margin-bottom:30px;}
+#page #body .intr ul li img{width:260px;height:260px;}
+#page #body .intr ul li div{width:600px;}
+#page #body .intr ul li div h3{text-indent: 2em;}
+#page #body .intr ul li div p{text-indent: 2em;line-height: 1.5em;}

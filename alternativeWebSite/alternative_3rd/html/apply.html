@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!-- Website template form http://www.cssmoban.com/ -->
+<head>
+  <title>Fantasy Game Web Template</title>
+  <meta  charset="utf-8">
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+  <script type="text/javascript" src='../js/jquery-1.11.1.min.js'></script>
+</head>
+<body>
+  <div id="page">
+    <div id="header">
+      <a id="logo" href="../index.html"><img src="../images/logo.png" alt=""></a>
+      <ul class="navigation">
+        <li class="first">
+          <a href="../index.html">首页</a>
+        </li>
+        <li>
+          <a href="about.html">游戏</a>
+        </li>
+        <li>
+          <a href="gameStore.html">游戏商城</a>
+        </li>
+        <li>
+          <a href="myths.html">注册</a>
+        </li>
+        <li>
+          <a class="active" href="apply.html">支付</a>
+        </li>
+      </ul>
+    </div>
+    <div id="body">
+      <div class="apply">
+        <h3>游戏充值</h3>
+        <div class="wrap clear">
+            <!--left{-->
+          <ul class="menu fl">
+            <li>
+                <a href="javascript:void" class="choice"><b></b>网银充值<i>&gt;</i></a>
+            </li>
+            <li>
+                <a href="javascript:void"><b></b>支付宝<i>&gt;</i></a>
+            </li>
+          </ul>
+                  <!--}left-->
+                <!--content{-->
+          <div class="fr main">
+            <form>
+              <dl class="clear">
+                <dt>账号：</dt>
+                <dd>
+                  <div class="m_input">
+                    <input type="text" class="inputText" name="account" id="account" placeholder="网站注册的会员帐号"/>
+                    <span class="prompt-false"></span>
+                  </div>
+                </dd>
+                <dt>确认账号：</dt>
+                <dd>
+                  <div class="m_input">
+                    <input type="text" class="inputText" id="rpt_account" placeholder="网站注册的会员帐号"/>
+                    <span class="prompt-false"></span>
+                  </div>
+                </dd>
+                <!-- <dt style="display: none">游戏大区：</dt>
+                <dd style="display: none">
+                    <select name="" id="" class="selectBox">
+                      <option value="">请选择游戏大区</option>
+                    </select>
+                </dd> -->
+                <dt>充值金额：</dt>
+                <dd>
+                  <ul class='somme clear'>
+                    <li class="price fl">
+                      <a href="javascript:;" data-val="10">10</a>
+                    </li>
+                    <li class="price fl">
+                      <a href="javascript:;" data-val="30">30</a>
+                    </li>
+                    <li class="price fl">
+                      <a href="javascript:;" data-val="50">50</a>
+                    </li>
+                    <li class="price fl">
+                      <a href="javascript:;" data-val="100">100</a>
+                    </li>
+                    <li class='fl'>
+                      <div class="m_input">
+                        <input type="number" class="inputText otherAmount" autocomplete="off"  maxlength="5" style="width: 45px;" placeholder="其它" />
+                      </div>
+                    </li>
+                    <li>元<input name="gameCoin" id="gameCoin" type="hidden"></li>
+                  </ul>
+                  <!-- <p>
+                    <font style="color:red;font-weight:bold;">  充值数量：<em id="payPrice">0</em>   EU币</font>
+                  </p> -->
+                </dd>
+                <dt>支付平台：</dt>
+                <dd class='applyPlatform'>
+                  <a href="javascript:;" class='current'>支付宝网银</a>
+                </dd>
+                <dt>充值银行：</dt>
+                <dd>
+                  <ul class="bankList clear">
+                    <li><a href="javascript:void(0)">中国银行</a></li>
+                    <li><a href="javascript:void(0)">工商银行</a></li>
+                    <li><a href="javascript:void(0)">招商银行</a></li>
+                    <li><a href="javascript:void(0)">建设银行</a></li>
+                    <li><a href="javascript:void(0)">农业银行</a></li>
+                    <li><a href="javascript:void(0)">浦发银行</a></li>
+                    <li><a href="javascript:void(0)">兴业银行</a></li>
+                    <li><a href="javascript:void(0)">广东发展银行</a></li>
+                    <li><a href="javascript:void(0)">中国民生银行</a></li>
+                    <li><a href="javascript:void(0)">交通银行</a></li>
+                    <li><a href="javascript:void(0)">中信银行</a></li>
+                    <li><a href="javascript:void(0)">杭州银行</a></li>
+                    <li><a href="javascript:void(0)">中国光大银行</a></li>
+                    <li><a href="javascript:void(0)">上海银行</a></li>
+                    <li><a href="javascript:void(0)">宁波银行</a></li>
+                    <li><a href="javascript:void(0)">平安银行</a></li>
+                    <li><a href="javascript:void(0)">北京农商银行</a></li>
+                    <li><a href="javascript:void(0)">邮政储蓄银行</a></li>
+                    <li><a href="javascript:void(0)">富滇银行</a></li>
+                    <input name="bank" id="bank" type="hidden" value="BOCB2C">
+                  </ul>
+                </dd>
+                <dt>应付金额：</dt>
+                <dd >
+                  <strong class="fwb">0</strong>元
+                </dd>
+                <dt></dt>
+                <dd>
+                    <input type="button" class="btn"  value="立即充值" name="">
+                </dd>
+              </dl>
+            </form>
+          </div>
+
+          <div class="fr main hidden">
+            <form>
+              <dl class="clear">
+                <dt>账号：</dt>
+                <dd>
+                  <div class="m_input">
+                    <input type="text" class="inputText" name="account" id="account" placeholder="网站注册的会员帐号"/>
+                    <span class="prompt-false"></span>
+                  </div>
+                </dd>
+                <dt>确认账号：</dt>
+                <dd>
+                  <div class="m_input">
+                    <input type="text" class="inputText" id="rpt_account" placeholder="网站注册的会员帐号"/>
+                    <span class="prompt-false"></span>
+                  </div>
+                </dd>
+                <!-- <dt style="display: none">游戏大区：</dt>
+                <dd style="display: none">
+                    <select name="" id="" class="selectBox">
+                      <option value="">请选择游戏大区</option>
+                    </select>
+                </dd> -->
+                <dt>充值金额：</dt>
+                <dd>
+                  <ul class='somme clear'>
+                    <li class="price fl">
+                      <a href="javascript:;" data-val="10">10</a>
+                    </li>
+                    <li class="price fl">
+                      <a href="javascript:;" data-val="30">30</a>
+                    </li>
+                    <li class="price fl">
+                      <a href="javascript:;" data-val="50">50</a>
+                    </li>
+                    <li class="price fl">
+                      <a href="javascript:;" data-val="100">100</a>
+                    </li>
+                    <li class='fl'>
+                      <div class="m_input">
+                        <input type="number" class="inputText otherAmount" autocomplete="off"  maxlength="5" style="width: 45px;" placeholder="其它" />
+                      </div>
+                    </li>
+                    <li>元<input name="gameCoin" id="gameCoin" type="hidden"></li>
+                  </ul>
+                  <!-- <p>
+                    <font style="color:red;font-weight:bold;">  充值数量：<em id="payPrice">0</em>   EU币</font>
+                  </p> -->
+                </dd>
+                <dt>支付平台：</dt>
+                <dd class='applyPlatform'>
+                  <a href="javascript:;" class='current'>扫码支付</a>
+                  <a href="javascript:;">电脑支付</a>
+                </dd>
+
+                <dt>应付金额：</dt>
+                <dd >
+                  <strong class="fwb">0</strong>元
+                </dd>
+                <dt></dt>
+                <dd>
+                    <input type="button" class="btn"  value="立即充值" name="">
+                </dd>
+              </dl>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="generalMsi">
+      <div class="container">
+        <ul class="clear">
+          <li class='fl'><a href="tradeDispute.html">交易纠纷</a></li>
+          <li class='fl'><a href="parentalControls.html">家长监护</a></li>
+          <li class='fl'><a href="rightsOfUser.html">用户权益</a></li>
+          <li class='fl'><a href="antiAddiction.html">防沉迷</a></li>
+          <li class='fl last'><a href="serviceArgument.html">服务协议</a></li>
+        </ul>
+        <p>
+          <span>
+            违法和不良信息举报电话：010-88808502
+          </span>
+          <span>
+            举报邮箱：cs@euplay.com
+          </span>
+        </p>
+        <p>
+          <span>
+            隐私保护
+          </span>
+          <span>
+            掌众游戏
+          </span>
+          <span>
+            版权所有
+          </span>
+          <span>
+            京ICP备
+          </span>
+          <span>
+            京网文
+          </span>
+          <span>
+            本公司游戏仅适合18岁以上玩家！
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src='js/index.js'></script>
+</body>
+</html>
