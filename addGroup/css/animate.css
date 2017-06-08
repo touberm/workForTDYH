@@ -1,0 +1,74 @@
+@-moz-keyframes breath{
+  from{transform: scale(1);}
+  to{transform:scale(1.16);}
+}
+@-webkit-keyframes breath{
+  from{transform: scale(1);}
+  to{transform:scale(1.16);}
+}
+@-ms-keyframes breath{
+  from{transform: scale(1);}
+  to{transform:scale(1.16);}
+}
+@-o-keyframes breath{
+  from{transform: scale(1);}
+  to{transform:scale(1.16);}
+}
+
+@-moz-keyframes flicker{
+  0% {color:#dcb965}
+  49.999%{color:#dcb965}
+  50%{color:#ff000c}
+  99.99%{color:#ff000c}
+  100% {color:#dcb965}
+}
+@-webkit-keyframes flicker{
+  0% {color:#dcb965}
+  49.999%{color:#dcb965}
+  50%{color:#ff000c}
+  99.99%{color:#ff000c}
+  100% {color:#dcb965}
+}
+@-ms-keyframes flicker{
+  0% {color:#dcb965}
+  49.999%{color:#dcb965}
+  50%{color:#ff000c}
+  99.99%{color:#ff000c}
+  100% {color:#dcb965}
+}
+@-o-keyframes flicker{
+  0% {color:#dcb965}
+  49.999%{color:#dcb965}
+  50%{color:#ff000c}
+  99.99%{color:#ff000c}
+  100% {color:#dcb965}
+}
+
+@-moz-keyframes flicker2{
+  0% {color:#ff000c;}
+  49.999%{color:#ff000c;}
+  50%{color:#fff;}
+  99.99%{color:#fff;}
+  100% {color:#ff000c;}
+}
+@-webkit-keyframes flicker2{
+  0% {color:#ff000c;}
+  49.999%{color:#ff000c;}
+  50%{color:#fff;}
+  99.99%{color:#fff;}
+  100% {color:#ff000c;}
+}
+@-ms-keyframes flicker2{
+  0% {color:#ff000c;}
+  49.999%{color:#ff000c;}
+  50%{color:#fff;}
+  99.99%{color:#fff;}
+  100% {color:#ff000c;}
+}
+@-o-keyframes flicker2{
+  0% {color:#ff000c;}
+  49.999%{color:#ff000c;}
+  50%{color:#fff;}
+  99.99%{color:#fff;}
+  100% {color:#ff000c;}
+}
