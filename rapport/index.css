@@ -1,0 +1,145 @@
+/*reset*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol,
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+.red {
+    color: #f00;
+}
+
+.dull_red {
+    color: #c00000;
+}
+
+.retract {
+    text-indent: 2em;
+}
+
+img {
+    display: block;
+    width: 100%;
+    padding: 2vw 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.yellow {
+    color: yellow;
+}
+
+
+/*main body*/
+
+header {
+    background: #f6e1d1;
+    padding: 6vw 3vw;
+}
+
+header h1 {
+    font-size: 5.4vw;
+    color: #A10000;
+}
+
+header p {
+    font-size: 3.6vw;
+    text-align: center;
+    margin-top: 2vw;
+}
+
+.main {
+    padding: 6vw 3vw;
+}
+
+.main h2 {
+    padding-top: 3vw;
+    font-size: 5vw;
+    line-height: 8vw;
+    font-weight: normal;
+}
+
+.main p {
+    font-size: 4vw;
+    line-height: 8vw;
+    text-align: justify;
+    padding-top: 3vw;
+}
+
+.main p.apply {
+    font-size: 5.6vw;
+    line-height: 10vw;
+}
+
+.main img.QRcode {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 160px;
+}
+
+footer {
+    padding: 6vw 3vw 16vw;
+}
+
+footer p {
+    font-size: 4vw;
+    line-height: 8vw;
+    padding-top: 2vw;
+    text-align: justify;
+}
+
+.fixed {
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    height: 10vw;
+    width: 100vw;
+    padding: 0 10vw;
+}
+
+.fixed a,
+.fixed span {
+    line-height: 10vw;
+    font-size: 5.4vw;
+    color: #fff;
+    font-weight: bold;
+}
+
+.fixed a {
+    background: #f00;
+    padding: 0 4vw;
+    border-radius: 2vw;
+}
