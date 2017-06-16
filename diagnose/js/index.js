@@ -42,7 +42,7 @@ $(function () {
       parent.find(".tel").focus();
       return false;
     }
-    $.get("http://www.cy177.com/api.php?op=sms&callback=?",{ mobile: mobile,type:'参与配资',random:Math.random()}, function(data){
+    $.get("http://www.cy177.com/api.php?op=sms&callback=?",{ mobile: mobile,type:'诊断',random:Math.random()}, function(data){
       if(data=="0") {           
         parent.time = 120;
         parent.find(".getVerify").attr("disabled", true).css('color','gray');
@@ -75,7 +75,7 @@ $(function () {
       if($('.verify').val() != '' && $('.verify').val() != '验证码'){
         verify = parent.find(".verify").val();
         mobile= parent.find(".tel").val();
-        $.get("http://www.cy177.com/api.php?callback=?",{op:"sms_idcheck",action:"id_code",mobile:mobile,mobile_verify:verify,type:'参与配资'}, function(data){
+        $.get("http://www.cy177.com/api.php?callback=?",{op:"sms_idcheck",action:"id_code",mobile:mobile,mobile_verify:verify,type:'诊断'}, function(data){
           if( data == "1" ) {
             parent.find('.hint').text("验证码正确").css('color','green');
           } else {
