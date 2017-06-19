@@ -1,0 +1,86 @@
+body{padding:0;margin:0;width:100%;font-family:"微软雅黑";margin: 0 auto;max-width:750px;}
+p,h3,h4,ul,li,ol{margin: 0px;padding: 0px;}
+li{list-style: none;padding:0;}
+img{border:0px;}
+a{text-decoration:none;color:#FF0000;}
+.clear:after{content: '';display: block;clear: both;}
+.fl{float: left;}
+.fr{float: right;}
+
+.All_Whole{width:750px;background:#ffffff;padding-top:35px;padding-bottom:285px;}
+.All_Whole .T1_p{font-size:45px;height:120px;line-height:60px;color:#000000;margin-left:28px;}
+.All_Whole .T1_p1{font-size:32px;line-height:32px;color:#797979;margin-top:38px;margin-left:28px;}
+.All_Whole .T1_p1 b{margin-left:31px;color:#797979;margin-right:30px;font-weight: normal;}
+.All_Whole .T1_p1 span{color:#1364c9}
+
+.All_Whole .T1_p2{font-size:30px;height:136px;line-height:46px;color:#2a2a2a;margin-left:28px;margin-top:53px;}
+
+
+
+.All_Whole .T1_p4{font-size:30px;height:272px;line-height:46px;color:#2a2a2a;margin-left:28px;margin-top:33px;}
+.All_Whole .Img1{width:690px;height:472px;display:block;margin:0 auto;}
+
+.All_Whole .T1_p5{font-size:30px;height:91px;line-height:46px;color:#2a2a2a;margin-left:28px;margin-top:33px;}
+.All_Whole .T1_p6{font-size:30px;height:318px;line-height:46px;color:#2a2a2a;margin-left:28px;margin-top:40px;}
+
+.All_Whole .T2_p1{font-size:30px;height:318px;display:table;line-height:46px;color:#2a2a2a;margin-left:28px;margin-top:35px;margin-bottom:35px;}
+
+.All_Whole .T2_p2{font-size:30px;height:136px;display:table;line-height:46px;color:#2a2a2a;margin-left:28px;}
+.All_Whole .Img2{width:688px;height:451px;display:block;margin:20px auto 0px auto;}
+
+.All_Whole .T2_p3{font-size:30px;height:91px;line-height:46px;color:#2a2a2a;margin-left:28px;margin-top:33px;}
+
+
+.All_Whole .T2_p4{font-size:30px;height:220px;line-height:46px;color:#2a2a2a;margin-left:28px;margin-top:20px;}
+.All_Whole .T2_p4 span{color:#ff0000;}
+
+.All_Whole .T3_Bot{width:690px;margin:46px auto 0px auto;}
+.All_Whole .T3_Bot_T{width:690px;height:53px;border-bottom:1px solid #dedede;}
+.All_Whole .T3_Bot_T .T3_Bot_R{float:right;width:300px;height:25px;margin-top:15px;}
+.All_Whole .T3_Bot_T .T3_Bot_R ul{height:25px;}
+.All_Whole .T3_Bot_T .T3_Bot_R ul li{height:25px;width:90px;padding-left:17px;padding-right:18px;float:left;font-size:22px;}
+.All_Whole .T3_Bot_T .T3_Bot_R ul .Le{border-right:1px solid #989898;}
+.All_Whole .T3_Bot_T .T3_Bot_R ul li .CL1{color:#4d4d4d;}
+.All_Whole .T3_Bot_T .T3_Bot_R ul li .CL2{color:#b1b1b1;}
+.All_Whole .T3_Bot_T .T3_Bot_L{line-height:29px;font-size:32px;color:#4d4d4d;border-bottom:1px solid #4d4d4d;float:left;height:54px;}
+.All_Whole .T3_Bot_T .T3_Bot_C{float:left;line-height:29px;font-size:32px;color:#999999;height:54px;}
+
+.All_Whole .T3_Bot_B{width:690px;}
+.All_Whole .T3_Bot_B ul{width:690px;}
+.All_Whole .T3_Bot_B ul .One_Li{height:141px;}
+.All_Whole .T3_Bot_B ul li{width:690px;height:186px;padding-top:30px;padding-bottom:23px;border-bottom:1px dotted #dfdfdf;}
+.All_Whole .T3_Bot_B ul li img{float:left;width:75px;height:75px;margin-left:1px;}
+.All_Whole .T3_Bot_B ul li .Rig{margin-left:105px;}
+.All_Whole .T3_Bot_B ul li .Rig_p1{line-height:42px;font-size:30px;color:#666666;}
+.All_Whole .T3_Bot_B ul li .Rig_p1 span{color:#9d9d9d;font-size:24px;}
+.All_Whole .T3_Bot_B ul li .Rig_p2{line-height:46px;font-size:28px;color:#2a2a2a;margin-top:10px;}
+.All_Whole .T3_Bot_B ul .Rund{border-bottom:0px;height:141px;}
+
+.PosiFu{width:100%;max-width:592px;height:151px;position:fixed;bottom:0;border-bottom:1px solid #b9b9b9;border-top:1px solid #b9b9b9;line-height:46px;font-size:30px;color:#4d4d4d;background:#FFFFFF;padding-left:158px;padding-top:25px;}
+.RongTai_weChat_R{width:91px;height:89px;position:absolute;margin-left:-128px;margin-top:10px;}
+.RongTai_weChat_R a{width:100px;height:100px;display:block;margin-top:6px;background:url("../images/08_03.png") no-repeat center; background-size: 100%;}
+.RongTai_weChat_R_T{width:60px;height:60px;position: absolute;margin-left:68px;margin-top:-19px;}
+.RongTai_weChat_R_T b{width:40px;height:40px;display:block;margin:20px auto 0px auto;border-radius:50%;background:#ff0000;line-height:40px;text-align: center;font-size:24px;color:#FFFFFF;}
+
+
+
+.fixbox {height: 278px; background:url("../images/fixbg.png") center no-repeat;position: fixed; bottom: -278px; left: 50%; width: 750px; margin-left: -375px; text-align: center;}
+.fix1,.fix2 {display: none; height: 100%;}
+.fixbox .active {display: block;}
+.fix1 .t1{color: #333; font-size: 32px; line-height: 48px; padding: 32px 0 24px;font-weight:bold;}
+.fix1 .t2{color: #ff0038; font-size: 54px; line-height: 70px;max-width:513px;padding:0 10px;margin:0 auto;height:70px;}
+.fix1 .t2 .fl.wxnumber{font-size:50px;background:#fff55c;color:#fe325e;line-height: 70px;height:70px;padding:0 20px;}
+.fix1 .t2 .fr.enterWeChat{font-size:30px;line-height: 70px;height:70px;}
+.fix1 .t2 .fr.enterWeChat a{color:#1cad64;text-decoration: underline;display: inline-block;font-size:30px;line-height: 70px;vertical-align: middle;height:70px;}
+.fix1 .t2 .fr.enterWeChat .redBtn{display: inline-block;background: url('../images/08_03.png') no-repeat center;background-size: 100%;width:40px;height:40px;vertical-align: middle;margin-left:6px;}
+.fix1 .t3{color: #333; font-size: 30px; line-height: 48px; padding: 10px 0 0;}
+.fix1 .t3 span{color:red !important;}
+.fix2 .t1{color: #333; font-size: 32px; line-height: 48px; padding: 32px 0 14px;font-weight:bold;}
+.fix2 .t2{color: #333; font-size: 32px; line-height: 48px; padding: 0 0 15px;}
+.fix2 .btn{display: block; width: 450px; height: 77px; margin: auto; background: url("../images/btn.png") center no-repeat;}
+
+.iospop {width: 586px; height: 426px; background: #FFFFFF; border-radius: 10px; text-align: center; display: none;}
+.iospop .txt1 {font-size: 30px; color: #333333; line-height: 36px; padding: 36px 0;}
+.iospop .txt2 {font-size: 44px; font-weight: bold; color: #eb2616; line-height: 66px;}
+.iospop .txt3 {font-size: 26px; color: #999999; line-height: 30px; padding: 30px 0; border-bottom: 1px solid #999;}
+.iospop .close {width: 120px; margin: 30px auto 0; color: #498cf0; font-size: 30px; line-height: 40px;}
