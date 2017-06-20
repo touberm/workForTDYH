@@ -1,0 +1,361 @@
+html,
+body,
+div,
+p,
+ul,
+figure,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+select,
+button,
+textarea,
+iframe,
+table,
+th,
+td,
+img,
+a {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  border: 0 none;
+  vertical-align: middle;
+}
+body {
+  -webkit-backface-visibility: hidden;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-overflow-scrolling: touch;
+  -webkit-user-drag: none;
+  color: #000;
+  word-wrap: break-word;
+  background: #fff;
+  margin: 0 auto;
+  padding:0;
+  border:none;
+  font-size: 12px;
+  line-height: 1.42857;
+  width: 6.4rem;
+  font-family:"Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+.main{
+	width:94%;
+	margin:0 auto 1rem;
+	text-align:center;
+	background:#fff;
+}
+.head1{
+	width:100%;
+	margin:0.4rem auto 0;
+}
+.p1{
+	font-size:0.34rem;
+	color:red;
+	line-height:0.5rem;
+	font-weight: 400;
+	text-align:justify;
+	text-justify: inter-ideograph;
+	padding-bottom: 0.2rem;
+}
+.line{
+    height: 1px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+.tit_tip{
+	width:100%;
+	margin:0 auto;
+}
+.p2{
+	font-size:0.24rem;
+	color:#607fa6;
+	line-height:0.6rem;
+	padding-bottom: 0.16rem;
+	text-align: left;
+}
+.p2 span{
+	font-size:0.22rem;
+	color:#8c8c8c;
+}
+.icon1{
+	width:0.33rem;
+	height:0.22rem;
+	display:inline-block;
+	background:url("../images/icon1.png") 50% 100% no-repeat;
+	background-size:0.33rem 0.22rem;
+}
+.p3{
+	
+	font-size:0.27rem;
+	line-height:0.44rem;
+	text-indent: 2em;
+	text-align:left;
+	color:#333;
+	padding:0.2rem 0 0.2rem;
+	text-align:justify;
+	text-justify: inter-ideograph;
+}
+.p3 strong{
+	font-weight:600;
+	color:#000;
+}
+.p3 .str1{
+	color:red;
+}
+.wxh{
+	color:red;
+	font-weight:600;
+}
+.tu{
+	width:40%;
+	/*height:2rem;*/
+	margin:0 auto;
+}
+.tu img{
+	width:100%;
+	/*height:2rem;*/
+}
+.pic2{
+	width:100%;
+	margin:0 auto;
+}
+.tu2{
+	width:50%;
+	margin:0 auto;
+}
+.tu2 img{
+	width:100%;
+}
+.wxh2{
+	font-weight:600;
+	color:#0000ff;
+	font-size:0.3rem;	
+}
+.btnlinks,
+.btnlinks2{
+	width:5rem;
+	height:0.7rem;
+	color:#fff;
+	text-align:center;
+	margin:0.2rem auto;
+	font-size:0.4rem;
+	line-height:0.7rem;
+	font-weight:600;
+  -webkit-border-radius:0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #c50000;
+  -webkit-box-shadow: inset 0 0 3px #fe0000;
+  -moz-box-shadow: inset 0 0 3px #fe0000;
+  box-shadow: inset 0 0 3px #fe0000;
+  border: solid 1px #ae0000;
+  background-image: -webkit-linear-gradient(top, #d10000, #b90000);
+  background-image: -moz-linear-gradient(top, #d10000, #b90000);
+  background-image: -o-linear-gradient(top, #d10000, #b90000);
+  background-image: -ms-linear-gradient(top, #d10000, #b90000);
+  background-image: linear-gradient(to bottom, #d10000, #b90000);	 
+}
+.btnlink1{
+		margin:0 auto;
+}
+.p4{
+	font-size:0.22rem;
+	margin:0.1rem auto 0.1rem;
+	text-align: center;
+}
+.p4 span{
+  color:red;
+}
+
+.p5{
+	font-size:0.25rem;
+	margin:0.2rem auto 0.1rem;
+	text-align: center;	
+}
+.blue{
+	background:#fff45c;
+	color:#000;
+}
+.container{
+	width:96%;
+	margin:0 auto 1.8rem;
+	background:#fff;
+}
+.container .tbTit{
+	width:100%;
+	height:0.5rem;
+	margin:0 auto;
+	border-top:#e3e3e3 1px solid;
+	border-bottom:#e3e3e3 1px solid;	
+}
+.container .tbTit .titLeft{
+	width:2rem
+	height:0.5rem;
+	line-height:0.5rem;
+	font-size:0.26rem;
+	color:#333;
+	background:url("../images/icon2.png") 0% 50% no-repeat;
+	background-size:0.5rem 0.5rem;
+	text-align: left;
+	padding-left:0.5rem;
+	float:left;
+
+}
+.container .tbTit .titLeft span{
+ color:red;
+ font-weight:500;
+
+}
+.container .tbTit .titRight{
+	width:4rem
+	height:0.5rem;
+	line-height:0.5rem;
+	font-size:0.26rem;
+	color:#333;
+  text-align: right;
+	padding-left:0.5rem;
+  float:right
+}
+.container .tbTit .titRight .titRight_1{
+	height:0.5rem;
+	line-height:0.5rem;
+	font-size:0.26rem;
+	color:#333;
+	background:url("../images/icon3.png") 0% 50% no-repeat;
+	background-size:0.4rem 0.5rem;
+	text-align: left;
+	padding-left:0.4rem;
+	float:left;
+}
+.container .tbTit .titRight .titRight_2{
+	height:0.5rem;
+	line-height:0.5rem;
+	font-size:0.26rem;
+	color:#333;
+	background:url("../images/icon4.png") 0% 50% no-repeat;
+	background-size:0.4rem 0.4rem;
+	text-align: left;
+	padding-left:0.4rem;
+	float:left;
+	
+}
+.tb{
+	width:100%;
+	margin:0 auto;
+	text-align:left;
+}
+.tb .flPic1{
+	width:100%;
+	height:0.54rem;
+	padding:0.1rem 0 0.2rem;
+}
+.tb .flTxt1{
+  font-size:0.28rem;
+  color:#333;
+  padding:0rem 0 0.15rem 0.1rem;
+}
+.tb .flTxt2{
+  font-size:0.2rem;
+  color:#a8a8a8;
+  padding:0.1rem 0 0.2rem 0.1rem;
+}
+
+.fc{
+	width:100%;
+	background:#c10000;
+	position:fixed;
+	bottom:0;
+	padding:0.1rem 0.2rem 0.1rem;
+	
+}
+.fc .fcLeft{
+	width:1.1rem;
+	height:1.1rem;
+	float:left;
+	text-align:left;
+	padding-left:0.2rem;	
+}
+.fc .fcLeft img{
+	width:1.1rem;
+	height:1.1rem;	
+}
+.fc .fcRight{
+	width:4.4rem;
+	float:right;
+	text-align:left;	
+}
+.fc .fcRight p{
+font-size:0.24rem;
+color:#fff;	
+line-height: 0.36rem;
+}
+.fc .fcRight p .span1{
+font-size:0.3rem;
+color:red;	
+background:#fff45c;
+font-weight:600;
+}
+.fc .fcRight p .span2{
+font-size:0.22rem;
+color:#fff;	
+background:#005ab6;
+font-weight:600;
+}
+.fc2{
+	width:0.7rem;
+	height:0.7rem;
+	position:fixed;
+	right:0.1rem;
+	top:2rem;
+}
+.fc2 img{
+	width:0.7rem;
+	height:0.7rem;
+}
+
+
+.jyopenbox, .jyopenbox1, .jyopenbox2, .jyopenbox3{width:100%;display: none; padding:2rem 0;border:0;}
+.close{position:absolute;top:2.7rem;left:5rem;width:0.5rem;height:0.5rem;/*padding:0.2rem 0 0 4.5rem;*/}
+.close img{width:0.5rem;height:0.5rem;}
+.tc{width:90%; height:6.8rem; background:url("../images/tc.png") 50% 0% no-repeat;background-size:90% 6.8rem;text-align:center;padding-top:3.4rem;}
+.tc .tips{width:5rem; padding:0.1rem 0 0 0;text-align:center;margin:0 auto;}
+.tc .tips p{font-size:0.26rem;color:#fff;line-height:0.4rem;font-weight:600;text-align:center;}
+.tc .tips p span{color:#f6ff03;}
+.btnlinks2{
+	width:4.4rem;
+	height:0.7rem;
+	color:#dd5427;
+  background-color: #fff603;
+  -webkit-box-shadow: inset 0 0 3px #f8ff37;
+  -moz-box-shadow: inset 0 0 3px #f8ff37;
+  box-shadow: inset 0 0 2px #f8ff37;
+  -webkit-box-shadow:0 0 2px #e7d400;
+  -moz-box-shadow:0 0 2px #e7d400;
+  box-shadow:0 0 2px #e7d400;  
+  border: solid 1px #f7ff29;
+  background-image: -webkit-linear-gradient(top, #fff603, #e7f000);
+  background-image: -moz-linear-gradient(top, #fff603, #e7f000);
+  background-image: -o-linear-gradient(top, #fff603, #e7f000;
+  background-image: -ms-linear-gradient(top, #fff603, #e7f000);
+  background-image: linear-gradient(to bottom, #fff603, #e7f000);	 	
+}
