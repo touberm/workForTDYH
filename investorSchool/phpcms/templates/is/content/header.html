@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+  <meta name="keywords" content="{$SEO['keyword']}">
+  <meta name="description" content="{$SEO['description']}">
+  <link rel="shortcut icon" href="{WEB_PATH}favicon.ico">
+  <link rel="stylesheet" href="{WEB_PATH}style/css/global.css?v0.1.0" type="text/css" charset="UTF-8" />
+  <link rel="stylesheet" href="{WEB_PATH}style/css/style.css?v0.1.0" type="text/css" charset="UTF-8" />
+  <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+  <script src="{WEB_PATH}style/js/global.js?v1.0.1" type="text/javascript" charset="utf-8"></script>
+  <script src="{WEB_PATH}style/js/index.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+  <div id="header">
+    <div class="top">
+      <div class="container">
+        <h1>股票资讯网</h1>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="container">
+        <ul class="clear">
+          {pc:content action="category" catid="6" siteid="$siteid" order="listorder ASC"} {loop $data $r}
+          <li class='fl'><a href="{$r[url]}">{$r[catname]}</a></li>
+          {/loop} {/pc}
+
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+  <div id="ad" class='container'>
+    <a href="">欢迎加入股票资讯网资讯3群，群号：531391440 &nbsp; &nbsp; 免费股票资讯微信：igumin888 &nbsp; &nbsp; 股票技巧微信：xuechaogu2017&nbsp; &nbsp; 免费加入哦!</a>
+  </div>
+
+
+
+  <!--index部分-->

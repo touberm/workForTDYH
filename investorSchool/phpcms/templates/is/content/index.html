@@ -1,0 +1,38 @@
+{template "content","header"}
+
+<div id="wrapMain" class="container">
+  <div id="main" class="fl">
+    {pc:get sql="SELECT * FROM `v9_news` ORDER BY `v9_news`.`id` ASC" cache="3600" num="10" page="$_GET[page]" return="data"
+    } {loop $data $r}
+    <div class="li clear">
+      <h2>
+        <a href="{$r[url]}">
+          {if $r[author]}
+          <span>{$r[author]}</span>&nbsp;:&nbsp;
+          {/if}
+          {$r[title]}
+        </a>
+      </h2>
+      <p class='article'>
+        {$r[description]}......<a href="{$r[url]}">继续阅读</a><span class="small">&gt;&gt;</span>
+      </p>
+      <p class='time fr'>{date('Y-m-d',$r[inputtime])}</p>
+
+    </div>
+    {/loop}
+
+    <div class="pages">
+      <!--<a class="a1">{$catid[items]}条</a>-->
+      <div>{$pages}</div>
+    </div>
+
+    {/pc}
+  </div>
+  <div id="sidebar" class="fr"></div>
+</div>
+
+<!--
+  </body>
+
+</html>
+-->
