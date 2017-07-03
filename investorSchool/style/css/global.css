@@ -14,22 +14,98 @@ body{background-image: url('../images/bg.png');}
 #header{background: #E74C3C;padding-bottom: 4px;}
 #header .top h1{font-family: '楷体';color:#fff;fong-size:40px;line-height: 40px;padding-top:50px;text-align: center;padding-bottom: 10px;}
 #header .menu{background:#4a4a4a;opacity: 0.9;}
-#header .menu ul{margin:0 auto;display: block;}
-#header .menu li a{display:block;font-size: 16px;line-height: 20px;padding: 16px 20px;color: #fff;text-decoration: none;}
+
+#header .menu ul.top{margin:0 auto;display: block;}
+#header .menu li.top{position: relative;}
+#header .menu li.top.active{background:#E74C3C;}
+#header .menu li.top.on{background:#d7301d;}
+
+#header .menu li.top>a{display:block;font-size: 16px;line-height: 20px;padding: 16px 20px;color: #fff;text-decoration: none;}
+/*todo2017-6-26*/
+#header .menu ul.sub{position: absolute;top:52px;left:0;color:E74C3C;display: none;}
+#header .menu li.sub{background: #E74C3C;color:#fff;width:180px;height:40px;font:normal 16px/40px 'Microsoft YaHei';}
+
+
+#header .menu li.sub a{color:#fff;text-align: center;display: block;}
 
 /*ad*/
 #ad{background:#fff;margin-bottom: 6px;}
 #ad a{color:#E53333;padding:0 0 0 40px;background: url('../images/volume.png') no-repeat left 10px center;line-height: 40px;font-size:18px;display: block;}
 
 /*main*/
-#main{width:820px;}
-#main .li{width: 800px;padding:10px;background: #fff;margin-bottom: 10px;}
+#main{width:900px;}
+#main .li{width: 880px;padding:10px;background: #fff;margin-bottom: 10px;}
 #main .li h2{color: #00a67c;font-size: 20px;line-height: 25px;padding-bottom: 6px;}
-#main .li h2 a{color: #00a67c;}
+#main .li h2 a{display: inline-block;}
+#main .li h2 a.tag{background:#d9534f;color:#fff;font:normal 14px/14px "Mricosoft YaHei";padding:3px 5px;vertical-align: middle;margin-right: 5px;position: relative;}
+#main .li h2 a.tag .arrow{display: block;position: absolute;width: 0;height:0;border:4px solid transparent;border-left:4px solid #d9534f;top:6px;right:-8px;}
+
+#main .li h2 a.title{color: #00a67c;vertical-align: middle;}
 #main .li p.article{color: #777;line-height: 24px;font-size:14px;}
 #main .li p.article a{color: #00a67c;}
-#main .li p.article span.small{font-size: 12px;}
+#main .li p.article span.small{font-size: 14px;}
 #main .li p.time{font-size:13px;line-height: 20px;padding-left:20px;background: url('../images/time.jpg') no-repeat left center;}
-#main .pages{text-align: center;}
-#main .pages a{display: inline-block;padding:0 2px;}
-#main .pages span{background:lightblue;display: inline-block;padding:0 2px;}
+#main .pages{text-align: center;widtH:880px;padding:10px ;background: #fff;}
+#main .pages a{display: inline-block;margin: 0 3px;padding: 4px 12px 3px;line-height: 20px;text-decoration: none;background-color: #eee;color: #666;}
+#main .pages span{background: #E74C3C;display: inline-block;margin: 0 3px;padding: 4px 12px 3px;line-height: 20px;text-decoration: none;color: #fff;}
+
+/*sidebar*/
+#sidebar{width:360px;}
+#sidebar .share{width:340px;background:#fff;padding:5px 10px;margin-bottom:20px;}
+#sidebar .share a{display: inline-block;width:45px;height:45px;border-radius: 1px;position: relative;margin-right: 5px;}
+#sidebar .share a.weibo{background: url('../images/weibo.jpg');}
+#sidebar .share a.wechat{background: url('../images/wechat.jpg');}
+#sidebar .share a.weibo:hover{background: url('../images/weibo_h.jpg');}
+#sidebar .share a.wechat:hover{background: url('../images/wechat_h.jpg');}
+#sidebar .share a .show{position: absolute;}
+#sidebar .share a.weibo .show{font-size:12px;background:#3c9d87;color:#fff;top: -24px;left: -3px;    padding: 2px 5px;width: 48px;display: none;}
+#sidebar .share a.weibo:hover .show{display: block;}
+#sidebar .share a.weibo .show .arrow{position: absolute;display: block;width: 0;height:0;border: 4px solid transparent;border-top: 4px solid #3c9d87;bottom: -8px;left: 25px;}
+#sidebar .share a.wechat .show{width:230px;border:1px solid #b6b6b6;border-radius: 4px;background: #fff;bottom:-267px;left:-96px;display: none;}
+#sidebar .share a.wechat .show h3{padding-left:20px;background:#f7f7f7;color:#7f7f7f;font:normal 12px/30px 'Mricosoft YaHei';border-bottom: 1px solid #ebebeb;}
+#sidebar .share a.wechat .show img{display: block;margin:20px auto;}
+#sidebar .share a.wechat .show .arrow{position: absolute;display: block;width: 0;height:0;border: 11px solid transparent;border-bottom: 11px solid #777 ;top: -22px;left: 102px;}
+#sidebar .share a.wechat .show .arrow::after{content: '';display: block;position: absolute;width: 0;height:0;border: 10px solid transparent;border-bottom: 10px solid #fff ;top: -9px;left:-10px;}
+#sidebar .share a.wechat:hover .show{display: block;}
+#sidebar .add{width:340px;background:#fff;padding:5px 10px;}
+#sidebar .add .red{color:#E74C3C;}
+#sidebar .add .header{font-size: 16px;font-weight: normal;line-height: 45px;    border-bottom: 1px solid #90bba8;margin:5px 10px;}
+#sidebar .add h3{line-height: 30px;color: #555;font-size:18px;text-align: center;}
+#sidebar .add a{display: block;margin:10px auto;}
+#sidebar .add a img{width:100%;}
+#sidebar .add a.wechat1{width:274px;}
+#sidebar .add h2{font-size:24px;line-height: 36px;text-align: center;padding-top:60px;}
+#sidebar .add a.wechat2{width:300px;}
+
+/*footer*/
+#footer{padding:40px 0;background: url('../images/footbg.jpg');margin-top:30px;}
+
+/*page of show.html*/
+
+#main .nav{background: #f7f7f7;padding: 9px 20px 7px;font-size: 12px;color: #bbb;margin: 0 2px;font-weight: bold;}
+#main .nav a{color: #00a67c; font-weight: normal;font-size:14px;}
+#main .nav span{font-weight: normal;font-size:14px;}
+#main .nav a.home{display: inline-block;width:13px;height:10px;background: url('../images/home.jpg') no-repeat center;}
+#main .nav a.home:hover{background: url('../images/home_active.jpg') no-repeat center;vertical-align: middle;}
+#main .header{padding: 2px 20px 12px;background-color: #fff;border-bottom: 1px solid #eee;}
+#main .header h3{color: #444;font-weight: normal;font-size: 24px;line-height: 60px;}
+#main .header .mes{font-size: 14px;line-height: 20px;}
+#main .header .mes .superior,
+#main .header .mes .time,
+#main .header .mes .user,
+#main .header .mes .view{padding-left:20px;background-repeat: no-repeat;background-position: left center;margin-right:20px;}
+#main .header .mes .superior{background-image: url('../images/superior.jpg');color:#00a67c;}
+#main .header .mes .user{background-image: url('../images/user.jpg');color:#00a67c;}
+#main .header .mes .time{background-image: url('../images/time.jpg');}
+#main .header .mes .view{background-image: url('../images/views.jpg');}
+#main .body{background: #fff;padding:10px 20px 20px;}
+#main .body hr{border: 0;border-top: 1px solid #eee;border-bottom: 1px solid #fff;}
+#main .body .wechat{border: #4094ef 1px solid;border-radius: 5px 5px 5px 5px;margin-bottom: 10px;padding: 5px 10px 15px;background-color: #fcf8e3;color: #8a6d3b;}
+#main .body .wechat .top{border-bottom: 0;height:17px;background-repeat: no-repeat;background-position: center;background-image: url('../images/broadcast.jpg');margin: 15px 0 ;}
+#main .body .wechat p{text-align: center;margin: 0 0 15px 0;font-size: 18px;font-family: SimHei;}
+#main .body .wechat p a{font-size: 20px;color:#000;}
+#main .body .wechat p .red{color:#f00;}
+#main .body .wechat p .bold{font-weight: bold;}
+#main .body .wechat:hover{background-color:#4094ef;}
+#main .body .wechat:hover .top{background-image: url('../images/broadcast_active.jpg');}
+#main .body .wechat:hover p{color:#fff;}

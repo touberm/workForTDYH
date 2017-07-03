@@ -1,12 +1,19 @@
 {template "content","header"}
+<!--{php if(!$CATEGORYS) $CATEGORYS = getcache('category_content_'.$siteid,'commons');}-->
 
-<div id="wrapMain" class="container">
+  <!--main-->
   <div id="main" class="fl">
-    {pc:get sql="SELECT * FROM `v9_news` ORDER BY `v9_news`.`id` ASC" cache="3600" num="10" page="$_GET[page]" return="data"
-    } {loop $data $r}
+    {pc:get sql="SELECT * FROM `v9_news` ORDER BY `v9_news`.`updatetime` DESC" cache="3600" num="10" page="$_GET[page]" return="data"
+    } 
+    <!--{pc:content }-->
+    {loop $data $r}
     <div class="li clear">
       <h2>
-        <a href="{$r[url]}">
+        <a href="" class="tag">
+          {$CATEGORYS[$r[catid]][catname]}
+          <span class='arrow'></span>
+        </a>
+        <a href="{$r[url]}" class="title">
           {if $r[author]}
           <span>{$r[author]}</span>&nbsp;:&nbsp;
           {/if}
@@ -14,7 +21,7 @@
         </a>
       </h2>
       <p class='article'>
-        {$r[description]}......<a href="{$r[url]}">继续阅读</a><span class="small">&gt;&gt;</span>
+        {$r[description]}......<a href="{$r[url]}">继续阅读</a><span class="small">&nbsp;»</span>
       </p>
       <p class='time fr'>{date('Y-m-d',$r[inputtime])}</p>
 
@@ -28,11 +35,8 @@
 
     {/pc}
   </div>
-  <div id="sidebar" class="fr"></div>
+  
 </div>
 
-<!--
-  </body>
 
-</html>
--->
+{template "content","footer"}

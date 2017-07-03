@@ -1,0 +1,42 @@
+{template "content","header"}
+
+
+<div id="main" class="fl">
+  {pc:content action="lists" catid="$catid" num="10" page="$_GET[page]" siteid="$siteid" order="listorder ASC" moreinfo="1"} 
+
+  {loop $data $r}
+  <div class="li clear">
+    <h2>
+      <a href="" class="tag">
+        {$catname}
+        <span class='arrow'></span>
+      </a>
+      <a href="{$r[url]}" class="title">
+        {$r[parentid]}
+          {if $r[author]}
+          <span>{$r[author]}</span>&nbsp;:&nbsp;
+          {/if}
+          {$r[title]}
+        </a>
+    </h2>
+    <p class='article'>
+      {$r[description]}......<a href="{$r[url]}">继续阅读</a><span class="small">&nbsp;»</span>
+    </p>
+    <p class='time fr'>{date('Y-m-d',$r[inputtime])}</p>
+
+  </div>
+  {/loop}
+
+  <div class="pages">
+    <!--<a class="a1">{$catid[items]}条</a>-->
+    <div>{$pages}</div>
+  </div>
+
+  {/pc}
+</div>
+</div>
+
+
+
+<!--END #wrap-->
+{template "content","footer"}

@@ -1,0 +1,16 @@
+{template "content","header_nosidebar"}
+<div class="container clear">
+  <ul id="gather-sidebar" class='fl'>
+    {pc:content action="category" num="30" catid="0" siteid="$siteid" order="listorder ASC" }
+    {loop $data $r}
+    <li><a href=""></a></li>
+    {/loop}
+
+    {/pc}
+  </ul>
+
+
+</div>
+
+
+{template "content","footer"}

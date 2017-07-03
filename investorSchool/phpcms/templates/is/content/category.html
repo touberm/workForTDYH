@@ -1,0 +1,46 @@
+{template "content","header"}
+
+
+<div id="main" class="fl">
+  <!--
+    sql SELECT a.name,b.age FROM `v9_xx` a,`v9_yy` b WHERE a.sex = b.sex AND (其他条件) ORDER BY b.inputtime DESC
+    sql的INNER JOIN 连接使用
+  -->
+  {pc:get sql="SELECT a.parentid,b.catid,b.author,b.title,b.description,b.inputtime,b.url FROM `v9_category` a, `v9_news` b WHERE a.catid = b.catid AND (a.parentid = $catid OR b.catid = $catid) ORDER BY b.inputtime DESC " cache="3600" num="10" page="$_GET[page]" return="data" }
+  
+  {loop $data $r}
+  <div class="li clear">
+    <h2>
+      <a href="" class="tag">
+          {$CATEGORYS[$r[catid]][catname]}
+          
+          <span class='arrow'></span>
+        </a>
+      <a href="{$r[url]}" class="title">
+          {if $r[author]}
+          <span>{$r[author]}</span>&nbsp;:&nbsp;
+          {/if}
+          {$r[title]}
+        </a>
+    </h2>
+    <p class='article'>
+      {$r[description]}......<a href="{$r[url]}">继续阅读</a><span class="small">&nbsp;»</span>
+    </p>
+    <p class='time fr'>{date('Y-m-d',$r[inputtime])}</p>
+
+  </div>
+  {/loop}
+
+  <div class="pages">
+    <!--<a class="a1">{$catid[items]}条</a>-->
+    <div>{$pages}</div>
+  </div>
+
+  {/pc}
+</div>
+</div>
+
+
+
+<!--END #wrap-->
+{template "content","footer"}
