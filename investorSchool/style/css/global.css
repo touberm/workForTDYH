@@ -13,7 +13,7 @@ body{background-image: url('../images/bg.png');}
 /*header*/
 #header{background: #E74C3C;padding-bottom: 4px;}
 #header .top h1{font-family: '楷体';color:#fff;fong-size:40px;line-height: 40px;padding-top:50px;text-align: center;padding-bottom: 10px;}
-#header .menu{background:#4a4a4a;opacity: 0.9;}
+#header .menu{background:#4a4a4a;opacity: 0.9;position: relative;z-index: 9999;}
 
 #header .menu ul.top{margin:0 auto;display: block;}
 #header .menu li.top{position: relative;}
@@ -35,9 +35,9 @@ body{background-image: url('../images/bg.png');}
 /*main*/
 #main{width:900px;}
 #main .li{width: 880px;padding:10px;background: #fff;margin-bottom: 10px;}
-#main .li h2{color: #00a67c;font-size: 20px;line-height: 25px;padding-bottom: 6px;}
+#main .li h2{color: #00a67c;font-size: 20px;line-height: 25px;padding-bottom: 6px;position: relative;z-index: 1;}
 #main .li h2 a{display: inline-block;}
-#main .li h2 a.tag{background:#d9534f;color:#fff;font:normal 14px/14px "Mricosoft YaHei";padding:3px 5px;vertical-align: middle;margin-right: 5px;position: relative;}
+#main .li h2 a.tag{background:#d9534f;color:#fff;font:normal 14px/14px "Mricosoft YaHei";padding:3px 5px;vertical-align: middle;margin-right: 5px;position: relative;z-index: 1;}
 #main .li h2 a.tag .arrow{display: block;position: absolute;width: 0;height:0;border:4px solid transparent;border-left:4px solid #d9534f;top:6px;right:-8px;}
 
 #main .li h2 a.title{color: #00a67c;vertical-align: middle;}
@@ -45,7 +45,8 @@ body{background-image: url('../images/bg.png');}
 #main .li p.article a{color: #00a67c;}
 #main .li p.article span.small{font-size: 14px;}
 #main .li p.time{font-size:13px;line-height: 20px;padding-left:20px;background: url('../images/time.jpg') no-repeat left center;}
-#main .pages{text-align: center;widtH:880px;padding:10px ;background: #fff;}
+#main .pages{text-align: center;width:900px;background: #fff;}
+#main .pages>div{width:900px;padding:10px 0 ;}
 #main .pages a{display: inline-block;margin: 0 3px;padding: 4px 12px 3px;line-height: 20px;text-decoration: none;background-color: #eee;color: #666;}
 #main .pages span{background: #E74C3C;display: inline-block;margin: 0 3px;padding: 4px 12px 3px;line-height: 20px;text-decoration: none;color: #fff;}
 

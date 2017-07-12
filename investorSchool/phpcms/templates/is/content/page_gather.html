@@ -1,0 +1,65 @@
+{template "content","header_nosidebar"}
+<style>
+.gat_side{width:170px;background:#fbfbfb;}
+.gat_side li{border-bottom: 1px solid #eee;width:170px;}
+.gat_side li a{margin-bottom: 1px;padding: 10px 10px;color: #888;border-left: solid 4px transparent;cursor: pointer;overflow: hidden;display: block;font-size: 14px;line-height: 20px;}
+.gat_side li.active a{ color: #444;background-color: #fff;border-left-color: #00a67c;margin-right: -1px;}
+.gat_side li a:hover{background-color: #f7f7f7;color: #666;}
+.gat_main{width:1068px;background:#fff;padding:20px;}
+.gat_main h2{font:normal 20px/24px 'Mircosoft YaHei';color:#444;}
+.gat_main hr{border:none;border-bottom: 1px dashed #eee;clear: both;}
+.gat_main .unit{width:267px;display:inline-block;float: left;font-weight: bold;}
+.gat_main .unit a{width: 118px;opacity: 0.7;filter: alpha(opacity=80);color: #fff;display: inline-block;padding: 2px 6px;line-height: 21px;background: #E74C3C;font-size: 12px;text-align: center;}
+.gat_main .unit span{color: #666;margin-left: 2px;margin-bottom: 10px;display: inline-block;font-weight: bold;}
+</style>
+
+<div class="container clear">
+  <ul class="gat_side fl">
+    {pc:content action="category" catid="0" siteid="$siteid" order="listorder ASC"}
+    {loop $data $r}
+    <!--{if}如果是当前栏目,或者父栏目是当前$r[catid],或者是父级的父级==$r[catid] 则 添加 action类-->
+    <li class='fl top {if ($r[catid] == $catid ) || ($CATEGORYS[$parentid][catid] == $r[catid])|| ($CATEGORYS[$CATEGORYS[$parentid][catid]][catid]  ==  $r[catid]  )}active{/if}'>
+      <a href="{$r[url]}">{$r[catname]}</a>
+    </li>
+    {/loop}
+    {/pc}
+  </ul>
+  <div class="gat_main fr clear">
+    <h2>股票名师大合集</h2>
+        
+    <hr>
+    <!-- SELECT a,b as aua FROM table GROUP BY author ORDER BY aua DESC  -->
+    <!-- 查询a,b(另起名为aua) 从table数据库中  用author进行分组 根据aua排序  -->
+    {pc:get sql="SELECT author, COUNT(author) as aua FROM `v9_news` GROUP BY author ORDER BY aua DESC " cache="3600" return="data"}
+    {php $k=1;}
+    {loop $data $r}
+    
+    {if $k%4 == 0}
+
+    <div class="unit">
+      <a href="">{$r[author]}</a>
+      ×
+      <span> {$r[aua]}</span>
+    </div>
+    <hr>
+
+    
+    {else}
+    
+    <div class="unit">
+      <a href="">{$r[author]}</a>
+      ×
+      <span> {$r[aua]}</span>
+    </div>
+
+    {/if}
+    {$k++}
+    {/loop}
+    {/pc}
+
+    <hr>
+  </div>
+</div>
+
+
+{template "content","footer"}
