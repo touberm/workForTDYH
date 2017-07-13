@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  
+</head>
+<body>
+  <a href="http://localhost/learnPHP/01.php" title='ttt'>跳转</a>
+  <script>
+    var oA = document.getElementsByTagName('a')[0];
+    var oUrl = oA.getAttribute('href');
+    var name='上帝';
+    //name = encodeURI(name);
+    // console.log(name);
+    // console.log(oA.getAttribute('href'));
+    oA.setAttribute('href',oUrl + '?fname=Runoob&age=3&author=tom&name='+name);
+  </script>
+</body>
+</html>

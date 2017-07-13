@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  body{margin:0;padding:0;background:lightcoral;}
+  #wrap{width:100%;height:400px;background:lightgoldenrodyellow;}
+  table{width:340px;background:#fff;padding:5px 10px;margin:60px auto 0;}
+  table caption{font-size: 16px;line-height: 40px;color: #555;}
+  table {width:340px;}
+  table tr{width:340px;}
+  table th,table td{width:42px;background-color: #fbfbfb;border: 1px solid #eee;height:26px;}
+  table td.on{background-color: #00a67c;cursor: pointer;color:#fff;}
+  table th a,table td a{display: block;width:42px;height:26px;color: #555;text-align: center;font-size: 14px;line-height: 26px;}
+  table td.on a{color:#fff;}
+  </style>
+</head>
+<body>
+  <div id="wrap"></div>
+<script>
+function getDate(){
+  var time = new Date();
+  var y = time.getFullYear();
+  var m = time.getMonth()-1;
+  /* 获取日期中的月份(需要注意的是：月份是从0开始计算，获取的值比正常月份的值少1) */
+  var firstday = new Date(y,m,1);
+  /* 获取当月的第一天 */
+  var dayOfWeek = firstday.getDay();
+  /* 判断第一天是星期几(返回[0-6]中的一个，0代表星期天) */
+  console.log(time);
+  console.log(y);
+  console.log(m);
+  console.log(dayOfWeek);
+  var daysPerMonth = new Array(31, 28 + isLeap(y), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+  /* 创建月份数组 */
+  var lineNum = Math.ceil((dayOfWeek + daysPerMonth[m]) / 7);
+  /* 确定日期表格所需的行数 */
+
+  var dateObj = {'year':y,'month':m,'dayOfWeek':dayOfWeek,'daysPerMonth':daysPerMonth[m],'lineNum':lineNum};
+  /* 将信息储存在对象中 */
+  return dateObj;
+}
+
+function isLeap(year){
+  /* 如果当前年份能被4整除但是不能被100整除或者能被400整除，即可确定为闰年，返回1，否则返回0 */
+  return year % 4 == 0 ? (year % 100 != 0 ? 1 : (year % 400 == 0 ? 1 : 0)) : 0;
+}
+
+
+function createCalendar(obj){
+  /* obj引用getDate(),后面需要在换月份的时候对getDate()修改 */
+  var str = '';
+  
+  str +='<table><caption>'+obj.year+'年'+(obj.month+1)+'月</caption><thead><tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr></thead><tbody>'
+  /* 生成表头及theader 注意月份需要+1 */
+
+  for(var i=0;i<obj.lineNum;i++){
+    str += '<tr>';
+    for(var j=0;j<7;j++){
+      var index = 7*i + j;
+      var start = index - obj.dayOfWeek + 1;
+      /* 将当月的1号与星期进行匹配 */
+      start = (start <= 0 || start > obj.daysPerMonth)   ? '' :  (index - obj.dayOfWeek + 1);
+      str += '<td><a href="">'+start+'</a></td>'
+
+    }
+    str += '</tr>'
+  }
+
+  str += '</tbody></table>'
+  
+
+  console.log(str);
+  return str;
+}
+
+
+var wrap = document.getElementById('wrap');
+wrap.innerHTML = createCalendar(getDate());
+
+
+</script>
+</body>
+</html>

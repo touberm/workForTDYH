@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <a href="http://baidu.com">跳转</a>
+  
+  <script>
+    var a = document.getElementsByTagName('a')[0];
+    a.onclick= function(ev){
+      var ev = ev || window.event;
+      ev.preventDefault();
+      var time = new Date(2017,6,3,0,0,0,0);
+      console.log(time.getTime());
+      /* alert(time.getTime()); */
+      location.href='http://localhost/investorSchool/index.php?m=content&c=index&a=lists&catid=23&date='+time.getTime()/1000;
+      
+    }
+  </script>
+</body>
+</html>
