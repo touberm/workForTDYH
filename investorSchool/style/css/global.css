@@ -68,7 +68,7 @@ body{background-image: url('../images/bg.png');}
 #sidebar .share a.wechat .show .arrow{position: absolute;display: block;width: 0;height:0;border: 11px solid transparent;border-bottom: 11px solid #777 ;top: -22px;left: 102px;}
 #sidebar .share a.wechat .show .arrow::after{content: '';display: block;position: absolute;width: 0;height:0;border: 10px solid transparent;border-bottom: 10px solid #fff ;top: -9px;left:-10px;}
 #sidebar .share a.wechat:hover .show{display: block;}
-#sidebar .add{width:340px;background:#fff;padding:5px 10px;}
+#sidebar .add{width:340px;background:#fff;padding:5px 10px;margin-bottom:20px;}
 #sidebar .add .red{color:#E74C3C;}
 #sidebar .add .header{font-size: 16px;font-weight: normal;line-height: 45px;    border-bottom: 1px solid #90bba8;margin:5px 10px;}
 #sidebar .add h3{line-height: 30px;color: #555;font-size:18px;text-align: center;}
@@ -77,6 +77,16 @@ body{background-image: url('../images/bg.png');}
 #sidebar .add a.wechat1{width:274px;}
 #sidebar .add h2{font-size:24px;line-height: 36px;text-align: center;padding-top:60px;}
 #sidebar .add a.wechat2{width:300px;}
+#sidebar #calendar{width:340px;background:#fff;padding:5px 10px;}
+#sidebar #calendar caption{font-size: 16px;line-height: 40px;color: #555;}
+#sidebar #calendar table{width:340px;}
+#sidebar #calendar tr{width:340px;}
+#sidebar #calendar th,#sidebar #calendar td{width:42px;background-color: #fbfbfb;border: 1px solid #eee;height:26px;}
+#sidebar #calendar td.on{background-color: #00a67c;cursor: pointer;color:#fff;}
+#sidebar #calendar table th a,#sidebar #calendar table td a{display: block;height:26px;color: #555;text-align: center;font-size: 14px;line-height: 26px;}
+#sidebar #calendar td.on a{color:#fff;}
+#sidebar #calendar td a.leftBtn{text-align:left;color:#00a67c;padding-left:10px;}
+#sidebar #calendar td a.rightBtn{text-align:right;color:#00a67c;padding-right:10px;}
 
 /*footer*/
 #footer{padding:40px 0;background: url('../images/footbg.jpg');margin-top:30px;}

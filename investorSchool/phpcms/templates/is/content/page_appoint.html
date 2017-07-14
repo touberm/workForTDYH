@@ -1,0 +1,51 @@
+<!-- page_appoint 指定日期 -->
+{template "content","header"}
+
+
+<!--js getTime()以毫秒为单位  php date()以秒为单位,所以js传参前除以1000或者php获取后除以1000  -->
+
+{php $date = $_GET[date];}
+<!--获取传参日期  -->
+{php $shiftDate = date('Y-m-d',$date);}
+<!--转换为'年-月-日'格式  -->
+
+
+    <div id="main" class="fl">
+    
+    {pc:get sql="SELECT * FROM `v9_news` WHERE DATE_FORMAT(FROM_UNIXTIME(inputtime),'%Y-%m-%d') = '$shiftDate' ORDER BY inputtime DESC" cache="3600" num="10" page="$_GET[page]" return = "date"}
+    <!-- DATE_FORMAT(FROM_UNIXTIME(inputtime),'%Y-%m-%d') 将inputtime转为'年-月-日' -->
+    {loop $data $r}
+    <div class="li clear">
+      <h2>
+        <a href="" class="tag">
+            {$CATEGORYS[$r[catid]][catname]}
+            
+            <span class='arrow'></span>
+          </a>
+        <a href="{$r[url]}" class="title">
+            {if $r[author]}
+            <span>{$r[author]}</span>&nbsp;:&nbsp;
+            {/if}
+            {$r[title]}
+          </a>
+      </h2>
+      <p class='article'>
+        {$r[description]}......<a href="{$r[url]}">继续阅读</a><span class="small">&nbsp;»</span>
+      </p>
+      <p class='time fr'>{date('Y-m-d',$r[inputtime])}</p>
+
+    </div>
+    {/loop}
+    
+    {if $pages}
+    <div class="pages">
+      <!--<a class="a1">{$catid[items]}条</a>-->
+      <div>{$pages}</div>
+    </div>
+    {/if}
+    {/pc}
+    </div>
+  
+</div>
+
+{template "content","footer"}

@@ -35,9 +35,10 @@
     {loop $data $r}
     
     {if $k%4 == 0}
-
+    <!--每行4个  额外加一个hr换行  -->
     <div class="unit">
-      <a href="">{$r[author]}</a>
+      <a href="{$CATEGORYS[21][url]}&gAuthor={$r[author]}">{$r[author]}</a>
+      <!--跳转地址为固定catid=21的单页面 通过传参进行页面跳转  -->
       ×
       <span> {$r[aua]}</span>
     </div>
@@ -47,7 +48,7 @@
     {else}
     
     <div class="unit">
-      <a href="">{$r[author]}</a>
+      <a href="{$CATEGORYS[21][url]}&gAuthor={$r[author]}">{$r[author]}</a>
       ×
       <span> {$r[aua]}</span>
     </div>

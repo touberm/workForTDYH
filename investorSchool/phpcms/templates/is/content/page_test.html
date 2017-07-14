@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+<!--通过月份获取那些日期有文章  -->
+  <?php 
+    $to = 7;
+    $arr = array();
+  ?>
+<br>
+$to:{$to}
+<br>
+
+<br>
+
+
+{pc:get sql="SELECT * FROM `v9_news` WHERE DATE_FORMAT(FROM_UNIXTIME(inputtime),'%m')=$to  ORDER BY inputtime DESC" $cache="3600" num="40" return="data"}
+
+
+{loop $data $r}
+<?php  
+array_push($arr,date('d',$r[inputtime]));
+/*将日期添加到数组中*/ 
+print_r($arr);
+/*测试输出*/
+?>
+<br>
+{/loop}
+{/pc}
+
+
+
+  <script type="text/JavaScript">
+   var readpoint = <?php echo json_encode($arr);?>;
+  /* 通过json_encode 将$arr转为json格式  将php中的$arr传递给js   */
+   //***注意不要用引号,如果用了json存储的数组就成字符串了。另外如果有键名要以对象的形式弹出如readpoint.id
+          console.log(readpoint);
+  </script>
+</body>
+</html>

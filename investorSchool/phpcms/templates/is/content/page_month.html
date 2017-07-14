@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+  <meta name="keywords" content="{$SEO['keyword']}">
+  <meta name="description" content="{$SEO['description']}">
+  <link rel="shortcut icon" href="{WEB_PATH}favicon.ico">
+  <link rel="stylesheet" href="{WEB_PATH}style/css/global.css?v0.1.0" type="text/css" charset="UTF-8" />
+  <link rel="stylesheet" href="{WEB_PATH}style/css/style.css?v0.1.0" type="text/css" charset="UTF-8" />
+  <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+  <script src="{WEB_PATH}style/js/global.js?v1.0.1" type="text/javascript" charset="utf-8"></script>
+  <script src="{WEB_PATH}style/js/style.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+  <div id="header">
+    <div class="top">
+      <div class="container">
+        <h1>股票资讯网</h1>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="container">
+        <ul class="clear top">
+          {pc:content action="category" catid="0" siteid="$siteid" order="listorder ASC"} {loop $data $r}
+          <!--{if}如果是当前栏目,或者父栏目是当前$r[catid],或者是父级的父级==$r[catid] 则 添加 action类-->
+          <li class='fl top {if ($r[catid] == $catid ) || ($CATEGORYS[$parentid][catid] == $r[catid])|| ($CATEGORYS[$CATEGORYS[$parentid][catid]][catid]  ==  $r[catid]  )}active{/if}'>
+            <a href="{$r[url]}">{$r[catname]}</a>
+            {if $CATEGORYS[$r[catid]][child] }
+            <ul class="sub">
+              {pc:content action="category" catid="$r[catid]" siteid="$siteid" } {loop $data $rr}
+              <li class='sub'><a href="{$rr[url]}">{$rr[catname]}</a></li>
+              {/loop} {/pc}
+            </ul>
+            {/if}
+          </li>
+          {/loop} {/pc}
+
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+  <div id="ad" class='container'>
+    <a href="">欢迎加入股票资讯网资讯3群，群号：531391440 &nbsp; &nbsp; 免费股票资讯微信：igumin888 &nbsp; &nbsp; 股票技巧微信：xuechaogu2017&nbsp; &nbsp; 免费加入哦!</a>
+  </div>
+  <!--#wrap 本页未结束  下部分应有div#main.fl 缺一个/div-->
+  <div class="container clear">
+    <!--sidebar-->
+    <div id="sidebar" class="fr">
+      <div class="share">
+        <a href="" class='weibo'>
+          <div class="show">
+            新浪微博
+            <span class="arrow"></span>
+          </div>
+        </a>
+        <a href="" class='wechat'>
+          <div class="show">
+            <h3>订阅号:#$%#@#@%</h3>
+            <img src="{WEB_PATH}style/images/QRcode_share.jpg" alt="">
+            <span class="arrow"></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="add">
+        <p class="header red">免费添加微信 成就股市梦想</p>
+        <h3>免费添加<span class="red">股票名家观点+重点内参资讯</span>微信</h3>
+        <h3>微信号：igumin888</h3>
+        <a href="" class='wechat1'>
+        <img src="{WEB_PATH}style/images/wechat1.png" alt="">
+      </a>
+        <h2>免费添加<span class="red">股票技巧学习</span>微信</h2>
+        <h3>微信号：xuechaogu2017</h3>
+        <a href="" class='wechat2'>
+        <img src="{WEB_PATH}style/images/wechat2.png" alt="">
+      </a>
+      </div>
+
+      <div id="calendar">
+        
+      </div>
+    </div>
+    <div id="main" class="fl">
+      {pc:get sql="SELECT * FROM `v9_news` ORDER BY `v9_news`.`updatetime` DESC" cache="3600" num="10" page="$_GET[page]" return="data" } 
+      <!--{pc:content }-->
+      {loop $data $r}
+      <div class="li clear">
+        <h2>
+          <a href="" class="tag">
+            {$CATEGORYS[$r[catid]][catname]}
+            <span class='arrow'></span>
+          </a>
+          <a href="{$r[url]}" class="title">
+            {if $r[author]}
+            <span>{$r[author]}</span>&nbsp;:&nbsp;
+            {/if}
+            {$r[title]}
+          </a>
+        </h2>
+        <p class='article'>
+          {$r[description]}......<a href="{$r[url]}">继续阅读</a><span class="small">&nbsp;»</span>
+        </p>
+        <p class='time fr'>{date('Y-m-d',$r[inputtime])}</p>
+
+      </div>
+      {/loop}
+
+
+      {if $pages}
+      <div class="pages">
+        <!--<a class="a1">{$catid[items]}条</a>-->
+        <div>{$pages}</div>
+      </div>
+
+      {/if}
+
+      {/pc}
+    </div>
+    
+  </div>
+
+  <div id="footer">
+  <div class="container"></div>
+</div>
+<?php
+  /* 获取年份月份,如果不存在设为当前年月  月份为0时empty会判断为false 所以月份区间应为[1-12]  */
+  $year = !empty($_GET["year"]) ? $_GET["year"] : date('Y');
+  $month = !empty($_GET['month']) ? $_GET['month'] : date('m');
+  $arr = array();
+  $inquire = $year . "-" . $month;
+  /*将年月拼接成字符串,在查询中使用*/
+?>
+
+{pc:get sql="SELECT * FROM `v9_news` WHERE DATE_FORMAT(FROM_UNIXTIME(inputtime),'%Y-%m')='$year-$month' ORDER BY inputtime DESC"   return="data"}
+  
+
+  {loop $data $rr}
+  {$inquire}
+  <?php  
+  array_push($arr,date('d',$rr[inputtime]));
+  /*将日期添加到数组中*/ 
+  print_r($arr);
+  /*测试输出*/
+  ?>
+  <br>
+  {/loop}
+
+ 
+{/pc}
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+
+  /* 获取年份月份 并转为数据类型 */
+  var urlYear = parseInt('<?php echo $year ?>');
+  var urlMonth = parseInt('<?php echo $month ?>');
+  console.log(urlYear);
+  console.log(urlMonth);
+
+
+  var arr = <?php echo json_encode($arr);?>;
+  <?php unset($arr) ?>
+  /* 通过json_encode 将$arr转为json格式  将php中的$arr传递给js   */
+  /*注意不要用引号,如果用了json存储的数组就成字符串了。另外如果有键名要以对象的形式弹出如readpoint.id*/
+  console.log(arr);
+
+  
+</script>
+
+<script>
+var calendar = document.getElementById('calendar');
+calendar.pageM=setDate().m;
+calendar.pageY=setDate().y;
+/* 将当前页面的年月储存在顶层变量中 */
+
+
+function getCurrent(){
+/* 获取当前年月 月份格式设置为[1-12] */
+  var time = new Date();
+  var y = time.getFullYear();
+  var m = time.getMonth();
+  /* 获取日期中的月份(需要注意的是：月份是从0开始计算，获取的值比正常月份的值少1) 
+    将其转为[1-12]格式
+  */
+  var dateObj = {'y':y,'m':m+1};
+  return dateObj;
+}
+
+function soleArr(arr){
+  /* 数组去重  获得月份里都有哪些有文章 */
+  var sole = {};
+  for(var i in arr){
+    if(!sole[parseInt(arr[i])]){
+      /* 如果不存在 将其存入对象,保存的信息作为键名 arr[i]为两位的字符串 如"02,13" 需用parseInt转为数字 */
+      sole[parseInt(arr[i])] = true;
+    }
+  }
+  return sole;
+}
+
+function getDate(y,m){
+  /* 通过year和month 设置日期信息 */
+  var firstday = new Date(y,m-1,1);
+  /* 获取当月的第一天 */
+  var dayOfWeek = firstday.getDay();
+  /* 判断第一天是星期几(返回[0-6]中的一个，0代表星期天) */
+  var daysPerMonth = new Array(31, 28 + isLeap(y), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+  /* 创建月份数组 */
+  var lineNum = Math.ceil((dayOfWeek + daysPerMonth[m-1]) / 7);
+  /* 确定日期表格所需的行数 */
+
+  var dateObj = {'y':y,'m':m,'dayOfWeek':dayOfWeek,'daysPerMonth':daysPerMonth[m-1],'lineNum':lineNum};
+  /* 将信息储存在对象中 */
+  return dateObj;
+}
+
+function isLeap(year){
+  /* 如果当前年份能被4整除但是不能被100整除或者能被400整除，即可确定为闰年，返回1，否则返回0 */
+  return year % 4 == 0 ? (year % 100 != 0 ? 1 : (year % 400 == 0 ? 1 : 0)) : 0;
+}
+
+function setDate() {
+/* 设置日期  并返回日期getDate()参数*/
+  if(urlYear && urlMonth){
+    /* 如果通过url传递日期参数 */
+    return getDate(urlYear,urlMonth);
+  }else{
+    // return getDate(getCurrent().y,getCurrent().m);
+  }
+}
+
+
+
+
+function createCalendar(obj){
+  
+  var obj = setDate();
+  var str = '';
+  var sole = soleArr(arr);
+  /* 获取去重的数组 */
+  var dateUrl = 'http://localhost/investorSchool/index.php?m=content&c=index&a=lists&catid=24'
+  str +='<table><caption>'+obj.y+'年'+obj.m+'月</caption><thead><tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr></thead><tbody>'
+  /* 生成表头及theader 注意月份需要+1 */
+
+  for(var i=0;i<obj.lineNum;i++){
+    str += '<tr>';
+    for(var j=0;j<7;j++){
+      var index = 7*i + j;
+      var start = index - obj.dayOfWeek + 1;
+      /* 将index与第一天的星期比较,等于0时,为正确的第一天,但是应该加1  小于0或大于最大天数时为空*/
+      start = (start <= 0 || start > obj.daysPerMonth)   ? '' :  (index - obj.dayOfWeek + 1);
+      if(sole[start]){
+      /* 去重数组中存在该值时 */
+        str += '<td class="on"><a href="" >'+start+'</a></td>'
+      }else{
+      str += '<td><a href="">'+start+'</a></td>'
+      }
+      
+    }
+    str += '</tr>'
+  }
+
+  var cur = getCurrent();
+  /* 当前年月 */
+  var prevM,nextM,prevY,nextY;
+  /* 上一月,下一月,上一月年,下一月年*/
+  if((cur.y == urlYear && cur.m == urlMonth) || (!urlYear || !urlMonth)){
+    /* 传参为当前年份  或者  传参不全/未传参 时*/
+    prevM = setBtn(cur.y,cur.m-1).m;
+    prevY = setBtn(cur.y,cur.m-1).y;
+    /* 不需要设置下一月 */
+    
+
+    str += '<tr><td colspan="3"><a href="'+dateUrl+'&year='+prevY+'&month='+formateM(prevM)+'" class="leftBtn" ><small>&lt;&lt;</small>'+(prevM+1)+'月</a></td><td></td><td colspan="3"></td></tr>'
+  }else{
+    prevM = setBtn(obj.y,obj.m-1).m;
+    prevY = setBtn(obj.y,obj.m-1).y;
+    nextM = setBtn(obj.y,obj.m+1).m;
+    nextY = setBtn(obj.y,obj.m+1).y;
+    str += '<tr><td colspan="3"><a href="'+dateUrl+'&year='+prevY+'&month='+formateM(prevM)+'" class="leftBtn" ><small>&lt;&lt;</small>'+prevM+'月</a></td><td></td><td colspan="3"><a href="'+dateUrl+'&year='+nextY+'&month='+formateM(nextM)+'"  class="rightBtn"><small>&gt;&gt;</small>'+nextM+'月</a></td></tr>'
+  }
+
+
+  
+  str += '</tbody></table>'
+  
+  return str;
+}
+
+function setBtn(y,m) {
+  /* 设置月份跳转按钮 */
+  var obj = {}
+  if(m>12){
+    obj.m =1;
+    obj.y = y+1;
+    return obj;
+  }
+  if(m<1){
+    obj.m = 12;
+    obj.y = y-1;
+    return obj;
+  }
+  obj.m = m;
+  obj.y = y;
+  return obj;
+  
+}
+
+function formateM(m){
+  /* 格式化月份为2位数 */
+  return ( parseInt(m)<10 ) ? ( '0'+ m) : m;
+}
+
+
+
+calendar.innerHTML = createCalendar();
+
+
+</script>
+
+
+</body>
+
+</html>
+
+
+
