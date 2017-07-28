@@ -2,6 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
  <head profile="http://gmpg.org/xfn/11">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <script type="text/javascript">
+    if(navigator.userAgent.match(/(iPhone|iPod|Android|ios|BlackBerry|IEMobile|Opera Mini)/i)){
+      var str = window.location.href;
+      var end = '';
+      var strFirst = str.indexOf('kp/');
+      str = str.substring(0,strFirst+3);
+      end = window.location.href.substring(strFirst+3);
+      console.log('first: ' + strFirst);
+      console.log('str: ' + str);
+      console.log('end: ' + end);
+      window.location.href = str + 'm/' + end;
+    }
+	</script>
   <meta name="generator" content="WordPress 4.7.3" />
   <link rel="stylesheet" href="./style/style.css" type="text/css" media="screen" />
   <title>期货开户_股指期货开户_商品期货开户-手续费最低的期货开户网</title>
