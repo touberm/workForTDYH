@@ -83,10 +83,10 @@ body{background-image: url('../images/bg.png');}
 #sidebar #calendar tr{width:340px;}
 #sidebar #calendar th,#sidebar #calendar td{width:42px;background-color: #fbfbfb;border: 1px solid #eee;height:26px;}
 #sidebar #calendar td.on{background-color: #00a67c;cursor: pointer;color:#fff;}
-#sidebar #calendar table th a,#sidebar #calendar table td a{display: block;height:26px;color: #555;text-align: center;font-size: 14px;line-height: 26px;}
-#sidebar #calendar td.on a{color:#fff;}
-#sidebar #calendar td a.leftBtn{text-align:left;color:#00a67c;padding-left:10px;}
-#sidebar #calendar td a.rightBtn{text-align:right;color:#00a67c;padding-right:10px;}
+#sidebar #calendar table th a,#sidebar #calendar table td a{display: block;height:26px;color: #555;text-align: center;font-size: 14px;line-height: 26px;cursor: default;}
+#sidebar #calendar td.on a{color:#fff;cursor: pointer;}
+#sidebar #calendar td a.leftBtn{text-align:left;color:#00a67c;padding-left:10px;cursor: pointer;}
+#sidebar #calendar td a.rightBtn{text-align:right;color:#00a67c;padding-right:10px;cursor: pointer;}
 
 /*footer*/
 #footer{padding:40px 0;background: url('../images/footbg.jpg');margin-top:30px;}
@@ -120,3 +120,7 @@ body{background-image: url('../images/bg.png');}
 #main .body .wechat:hover{background-color:#4094ef;}
 #main .body .wechat:hover .top{background-image: url('../images/broadcast_active.jpg');}
 #main .body .wechat:hover p{color:#fff;}
+
+
+/*page_month 月份预览  */
+#main .month_title{font-size: 22px;color: #7a6f6f;font-weight: normal;margin:5px 0;line-height: 35px;background-color: #fbfbfb;padding: 5px 20px;margin-bottom: 1px;}

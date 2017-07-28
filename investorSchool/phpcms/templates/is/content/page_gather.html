@@ -30,7 +30,7 @@
     <hr>
     <!-- SELECT a,b as aua FROM table GROUP BY author ORDER BY aua DESC  -->
     <!-- 查询a,b(另起名为aua) 从table数据库中  用author进行分组 根据aua排序  -->
-    {pc:get sql="SELECT author, COUNT(author) as aua FROM `v9_news` GROUP BY author ORDER BY aua DESC " cache="3600" return="data"}
+    {pc:get sql="SELECT author, COUNT(author) as aua FROM `v9_news` GROUP BY author ORDER BY aua DESC " return="data"}
     {php $k=1;}
     {loop $data $r}
     

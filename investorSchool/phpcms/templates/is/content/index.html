@@ -3,7 +3,7 @@
 
   <!--main-->
   <div id="main" class="fl">
-    {pc:get sql="SELECT * FROM `v9_news` ORDER BY `v9_news`.`updatetime` DESC" cache="3600" num="10" page="$_GET[page]" return="data"
+    {pc:get sql="SELECT * FROM `v9_news` ORDER BY inputtime DESC" cache="3600" num="10" page="$_GET[page]" return="data"
     } 
     <!--{pc:content }-->
     {loop $data $r}
@@ -41,6 +41,110 @@
   </div>
   
 </div>
+<!-- 日历   -->
+<?php
+  /* 获取年份月份,如果不存在设为当前年月  月份为0时empty会判断为false 所以月份区间应为[1-12]  */
+  $year = !empty($_GET["year"]) ? $_GET["year"] : date('Y');
+  $month = !empty($_GET['month']) ? $_GET['month'] : date('m');
+  $arr = array();
+  
+?>
+
+
+{pc:get sql="SELECT * FROM `v9_news` WHERE DATE_FORMAT(FROM_UNIXTIME(inputtime),'%Y-%m')='$year-$month' ORDER BY inputtime DESC"   return="data"}
+  {loop $data $rr}
+  <?php  
+  array_push($arr,date('d',$rr[inputtime]));
+  /*将日期添加到数组中*/ 
+  /*print_rr($arr);*/
+  /*测试输出*/
+  ?>
+  {/loop}
+{/pc}
+
+<script>
+
+  /* 获取年份月份 并转为数据类型 */
+  var urlYear = parseInt('<?php echo $year ?>');
+  var urlMonth = parseInt('<?php echo $month ?>');
+  var arr = <?php echo json_encode($arr);?>;
+  <?php unset($arr) ?>
+  /* 通过json_encode 将$arr转为json格式  将php中的$arr传递给js   */
+  /*注意不要用引号,如果用了json存储的数组就成字符串了。另外如果有键名要以对象的形式弹出如readpoint.id*/
+</script>
+
+<script>
+var calendar = document.getElementById('calendar');
+calendar.pageM=setDate().m;
+calendar.pageY=setDate().y;
+/* 将当前页面的年月储存在顶层变量中 */
+
+function setDate() {
+/* 设置日期  并返回日期getDate()参数*/
+  if(urlYear && urlMonth){
+    /* 如果通过url传递日期参数 */
+    return getDate(urlYear,urlMonth);
+  }else{
+    // return getDate(getCurrent().y,getCurrent().m);
+  }
+}
+
+function createCalendar(){
+  var obj = setDate();
+  var str = '';
+  var sole = soleArr(arr);
+  /* 获取去重的数组 */
+
+  var monthUrl = '{$CATEGORYS[24][url]}';
+  var dayUrl = '{$CATEGORYS[25][url]}';
+  str +='<table><caption>'+obj.y+'年'+obj.m+'月</caption><thead><tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr></thead><tbody>'
+  /* 生成表头及theader 注意月份需要+1 */
+
+  for(var i=0;i<obj.lineNum;i++){
+    str += '<tr>';
+    for(var j=0;j<7;j++){
+      var index = 7*i + j;
+      var start = index - obj.dayOfWeek + 1;
+      /* 将index与第一天的星期比较,等于0时,为正确的第一天,但是应该加1  小于0或大于最大天数时为空*/
+      start = (start <= 0 || start > obj.daysPerMonth)   ? '' :  (index - obj.dayOfWeek + 1);
+      if(sole[start]){
+      /* 去重数组中存在该值时 */
+        str += '<td class="on"><a href="'+dayUrl+'&year='+obj.y+'&month='+formateM(obj.m)+'&day='+formateM(start)+'" >'+start+'</a></td>'
+      }else{
+      str += '<td><a>'+start+'</a></td>'
+      }
+    }
+    str += '</tr>'
+  }
+
+  var cur = getCurrent();
+  /* 当前年月 */
+  var prevM,nextM,prevY,nextY;
+  /* 上一月,下一月,上一月年,下一月年*/
+  if((cur.y == urlYear && cur.m == urlMonth) || (!urlYear || !urlMonth)){
+    /* 传参为当前年份  或者  传参不全/未传参 时*/
+    prevM = setBtn(cur.y,cur.m-1).m;
+    prevY = setBtn(cur.y,cur.m-1).y;
+    /* 不需要设置下一月 */
+
+    str += '<tr><td colspan="3"><a href="'+monthUrl+'&year='+prevY+'&month='+formateM(prevM)+'" class="leftBtn" ><small>&lt;&lt;</small>'+prevM+'月</a></td><td></td><td colspan="3"></td></tr>'
+  }else{
+    prevM = setBtn(obj.y,obj.m-1).m;
+    prevY = setBtn(obj.y,obj.m-1).y;
+    nextM = setBtn(obj.y,obj.m+1).m;
+    nextY = setBtn(obj.y,obj.m+1).y;
+    str += '<tr><td colspan="3"><a href="'+monthUrl+'&year='+prevY+'&month='+formateM(prevM)+'" class="leftBtn" ><small>&lt;&lt;</small>'+prevM+'月</a></td><td></td><td colspan="3"><a href="'+monthUrl+'&year='+nextY+'&month='+formateM(nextM)+'"  class="rightBtn"><small>&gt;&gt;</small>'+nextM+'月</a></td></tr>'
+  }
+  str += '</tbody></table>'
+  return str;
+}
+
+calendar.innerHTML = createCalendar();
+/* 添加到页面中 */
+
+</script>
+<!-- END  日历  -->
+
 
 
 {template "content","footer"}
