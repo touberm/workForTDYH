@@ -11,6 +11,8 @@
   + type:诊断
 - [http://www.168gz.com/mayDay2017/index.html](http://www.168gz.com/mayDay2017/index.html)
   + type:五一活动
-- [6.26期货开户]()
+- [6.26期货开户](http://168gz.com/kp/index.html)
   + type:期货开户
+- [aug2017](http://168gz.com/aug2017/index.html)
+  + type:八月
 
