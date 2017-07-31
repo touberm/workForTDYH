@@ -1,6 +1,6 @@
 body,h1,h2,h3,h4,h5,h6,p,table,tr,td,th,ul,li{margin:0;padding:0;}
 body{background:#000;}
-img{max-width:100%;vertical-align: middle;}
+img{max-width:100%;vertical-align: middle;border:none;}
 .fl{float: left;}
 .fr{float: right;}
 .clear:after{content: '';display: block;clear:both;}
@@ -28,7 +28,8 @@ img{max-width:100%;vertical-align: middle;}
 #main .present ul li div.unit .text h3{font:normal 18px/18px '黑体';padding-bottom:18px;}
 #main .present ul li div.unit .text p{font:normal 15px/15px '黑体';padding-bottom:10px;}
 #main .present ul li div.unit .text a{margin:30px auto 0;;display: block;width:182px;height:50px;font:normal 29px/50px '黑体';text-align: center;border:0;outline: none;color:#fff;background-color:#b30016;border-radius: 4px;cursor: pointer;text-decoration: none;}
-#main .present ul li.second img.unit{display: block;margin:10px auto 125px;}
+#main .present ul li.second div.unit{display: block;margin:10px auto 125px;width:748px;height:454px;position: relative;}
+#main .present ul li.second div.unit a{position: absolute;display: block;width: 96px;height: 26px;top:320px;left:293px;}
 #main .get{padding-top:100px;}
 #main .get>img.header{display: block;margin:0 auto;}
 #main .get table{color:#fff;border-collapse: collapse;border:1px solid #666;width:100%;margin-top:40px;margin-bottom: 20px;}
