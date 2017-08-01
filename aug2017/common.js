@@ -116,5 +116,105 @@ $(function(){
       $(this).attr('value',$(this).val());
     }
   });
+  /* END 表单验证 */
+  /* video */
+  /* oncanplaythrough 可以正常播放且无需停顿和缓冲时触发。 */
+  /* $('video').on('canplaythrough',function(){
+    
+    $('#video').show();
+  }); */
+  $('#video span').hide();/* 隐藏 */
+  var maxmin = false;/* false为最小 */
+  $('#video').on('mouseover',function(){
+    $('#video span').show();
+  }).on('mouseleave',function(){
+    $('#video span').hide();
+  }).on('click',function(){
+    if(!maxmin){
+      /* 只有最小化时点击有效 */
+      var wh = setWH();
+      $('#video').css({'width':wh.w,'height':wh.h,'bottom':wh.top,'left':wh.left});
+      /* $('video').css({'width':wh.w,'height':wh.h}); */
+      maxmin = true;
+      setMaxmin(maxmin);
+    }
+    
+  });
+  $('#video .close').on('click',function(ev){
+    var ev = ev || window.event;
+    ev.stopPropagation();
+    $('#video').hide()
+    $('#video1').get(0).pause();
+  });
+  $('#video .maxmin').on('click',function(ev){
+    var ev = ev || window.event;
+    ev.stopPropagation();
+    if(maxmin){
+      /* 最大 */
+       $('#video').css({'width':400,'height':225,'bottom':0,'left':0});
+       maxmin = false;
+       setMaxmin(maxmin);
+      /* $('video').css({'width':wh.w,'height':wh.h}); */
+    }else{
+      var wh = setWH();
+      $('#video').css({'width':wh.w,'height':wh.h,'bottom':wh.top,'left':wh.left});
+      /* $('video').css({'width':wh.w,'height':wh.h}); */
+      maxmin = true;
+      setMaxmin(maxmin);
+    }
+
+  })
+
+  function getWin(){
+    /* 获取屏幕宽高 */
+    var win = {};
+    win.w = $(window).outerWidth();
+    win.h = $(window).outerHeight();
+    console.log('getWin  :'+ win.w+':'+win.h);
+    return win;
+  }
+  
+  function setWH(){
+    /* 设置#video宽高 及top/left */
+    var wh = {};
+    var win = getWin()
+    wh.w = win.w;
+    wh.h = wh.w * 1080 / 1920 ;
+    wh.top = (win.h - wh.h) / 2;
+    wh.left = (win.w - wh.w) / 2;
+    if(wh.h > win.h){
+      /* 当视频高度大于屏幕可视区域高度时 */
+      wh.h = win.h;
+      wh.w = win.h * 1920 / 1080;
+      wh.top = 0;
+      wh.left = ( win.w - wh.w) / 2;
+    }
+    return wh;
+  }
+
+  function setMaxmin(bool){
+    if(bool){
+      /* 最大时 html ==> _ */
+      $('#video .maxmin').html('_');
+    }else{
+      $('#video .maxmin').html('□');
+    }
+  }
+
+  $(window).on('resize',function(){
+    if(maxmin){
+      /* 最大 */
+      $('#video').css({'width':400,'height':225,'bottom':0,'left':0});
+      maxmin = false;
+      setMaxmin(maxmin);
+      /* $('video').css({'width':wh.w,'height':wh.h}); */
+    }else{
+      var wh = setWH();
+      $('#video').css({'width':wh.w,'height':wh.h,'bottom':wh.top,'left':wh.left});
+      /* $('video').css({'width':wh.w,'height':wh.h}); */
+      maxmin = true;
+      setMaxmin(maxmin);
+    }
+  });
 
 })

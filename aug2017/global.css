@@ -29,7 +29,7 @@ img{max-width:100%;vertical-align: middle;border:none;}
 #main .present ul li div.unit .text p{font:normal 15px/15px '黑体';padding-bottom:10px;}
 #main .present ul li div.unit .text a{margin:30px auto 0;;display: block;width:182px;height:50px;font:normal 29px/50px '黑体';text-align: center;border:0;outline: none;color:#fff;background-color:#b30016;border-radius: 4px;cursor: pointer;text-decoration: none;}
 #main .present ul li.second div.unit{display: block;margin:10px auto 125px;width:748px;height:454px;position: relative;}
-#main .present ul li.second div.unit a{position: absolute;display: block;width: 96px;height: 26px;top:320px;left:293px;}
+#main .present ul li.second div.unit a{position: absolute;display: block;width: 160px;height: 26px;top:325px;left:293px;font:normal 16px/26px 'Microsoft YaHei';background:#b30016;color:#fff;border-radius: 6px;text-align: center;text-decoration: none;}
 #main .get{padding-top:100px;}
 #main .get>img.header{display: block;margin:0 auto;}
 #main .get table{color:#fff;border-collapse: collapse;border:1px solid #666;width:100%;margin-top:40px;margin-bottom: 20px;}
@@ -52,3 +52,11 @@ img{max-width:100%;vertical-align: middle;border:none;}
 #footer .apply form .sub{width:154px;background:#a90015;border:1px solid #a90015;font-size:23px;cursor: pointer;}
 #footer .apply form .hint{text-align: right;color:#fff;padding: 10px 76px 10px 0;clear:both;}
 #footer h1{display:block;padding:144px 0 90px;font:normal 46px/46px 'Microsoft YaHei';text-align: center;color:#fff;}
+
+/* video */
+#video{position: fixed;bottom:0;left:0;border:1px solid transparent;width:400px;height:225px;display: block;border-radius: 6px;overflow: hidden;}
+#video video{width:100%;}
+#video span{position: absolute;top:0px;right:0px;display: block;font:bold 16px/30px '黑体';color:#c20;cursor: pointer;transition: all 0.6s;width:30px;height:30px;text-align: center;}
+#video span.close{top:0px;right:0px;}
+#video span.maxmin{top:0px;right:30px;font-size:14px;}
+#video span:hover{color:#fff;}
