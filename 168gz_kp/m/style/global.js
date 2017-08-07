@@ -4,6 +4,7 @@ $(function () {
   /*表单提交*/
   /*Done  index 改为parent*/
   $(".sub").click(function () {
+    $('#success').show();
     var parent = $(this).parents('form');
     // verify = parent.find(".verify").val();
     mobile = parent.find(".tel").val();

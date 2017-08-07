@@ -284,8 +284,8 @@ img.centered {
 
 /*success - img*/
 #success{position: fixed;width:100%;top:0;left:0;display: none;z-index: 999;}
-#success .box{width:700px;height:380px;margin:0 auto;position: relative;border:1px solid #ccc;}
-#success .box span{cursor: pointer;font:bold 30px/40px '黑体';position: absolute;right:0;top:0;display: block;width:40px;height:40px;text-align: center;color:#fff;}
+#success .box{width:100vw;margin:0 auto;position: relative;}
+#success .box span{cursor: pointer;font:bold 3vw/8vw '黑体';position: absolute;right:0;top:0;display: block;width:8vw;height:8vw;text-align: center;color:#fff;}
 
 
 /* kfoutbox */
